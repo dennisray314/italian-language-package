@@ -1,0 +1,31 @@
+{if $GENDER != ''}Caro {$GENDER}{else}Ciao{/if} {$NAME},
+
+il vostro conto è stato creato con successo!
+
+Ora avete accesso alle seguenti funzioni:
+
+-Carrello - I prodotti inseriti nel carrello rimarranno lì fino a quando non saranno stati cancellati o acquistati.
+-Rubrica - La rubrica consente di salvare diverse destinazioni di spedizione.
+-Storia dell'ordine - Lo storico dei vostri ordini è sempre disponibile per voi.
+-Valutazione del prodotto - Valuta e commenta i nostri prodotti!
+
+Se questo account non è stato creato da voi, 
+      vi preghiamo di contattarci a {$content.MAIL_REPLY_ADDRESS}.
+
+{if $SEND_GIFT == true}
+Come ringraziamento per aver creato il vostro conto, avete ricevuto un {$GIFT_AMMOUNT} buono regalo!
+
+Riscatta il tuo buono con il seguente codice {$GIFT_CODE} al momento dell'ordine o semplicemente cliccando il seguente link {$GIFT_LINK}.
+{/if}
+
+{if $SEND_COUPON == true}
+Come ringraziamento per aver creato il tuo account, hai ricevuto un buono sconto!
+
+I dettagli del voucher sono: {$COUPON_DESC}
+
+Riscatta il tuo voucher inserendo il codice {$COUPON_CODE} durante il processo di checkout, quando ti viene richiesto.
+{/if} 
+
+Se avete domande, contattateci a {$content.MAIL_REPLY_ADDRESS}!
+
+[SIGNATUR]

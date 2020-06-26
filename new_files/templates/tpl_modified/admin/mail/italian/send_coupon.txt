@@ -1,0 +1,11 @@
+{$MESSAGE}
+
+Può utilizzare il buono per i suoi ordini. Inserisca il numero del buono nel campo buono. 
+
+Il numero del suo buono è: {$COUPON_ID}
+
+Conservi con cura il numero del buono, solo così può approfittare di quest'offerta 
+la prossima volta che verrà a visitare il sito  {$WEBSITE}.
+
+[SIGNATUR]
+

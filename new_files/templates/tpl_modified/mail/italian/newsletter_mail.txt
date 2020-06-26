@@ -1,0 +1,31 @@
+
+Grazie per la sottoscrizione!
+
+{if isset($LINK)}
+Ricevi questa e-mail perché vuoi ricevere la nostra newsletter.
+
+Cliccare il seguente link di attivazione per ricevere le newsletter. Se non ti sei iscritto a questo servizio, ignora questa e-mail!
+
+Il vostro link di attivazione:
+{$LINK}
+
+Se non vi siete registrati alla nostra newsletter o non desiderate ricevere la newsletter, ignorate il link di attivazione.
+
+Il vostro consenso all'invio della nostra newsletter è revocabile in qualsiasi momento. La newsletter viene inviata secondo la nostra politica sulla privacy.
+{/if}
+
+{if $SEND_GIFT == true}
+Come ringraziamento per aver creato il vostro conto, avete ricevuto un {$GIFT_AMMOUNT} buono regalo!
+
+Riscatta il tuo buono con il seguente codice - {$GIFT_CODE} - al momento dell'ordine o semplicemente cliccando il seguente link {$GIFT_LINK}.
+{/if}
+
+{if $SEND_COUPON == true}
+Come ringraziamento per aver creato il tuo account, hai ricevuto un buono sconto!
+
+I dettagli del voucher sono: {$COUPON_DESC}
+
+Riscatta il tuo voucher inserendo il codice {$COUPON_CODE} durante il processo di checkout, quando ti viene richiesto.
+{/if} 
+
+[SIGNATUR]

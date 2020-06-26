@@ -1,0 +1,53 @@
+<div style="width:700px;margin: 0px auto;">
+<table width="700" border="0" align="center" cellpadding="5" cellspacing="0">
+	<tr> 
+    	<td align="center" style="padding: 10px 0px;"><img src="{$logo_path}logo.gif" /></td>
+	</tr>
+	<tr> 
+    <td style="font-size:14px;text-transform:uppercase;padding:10px 5px;border-top: 1px dotted #999;border-bottom: 1px dotted #999;">
+      <font face="Tahoma, Verdana, sans-serif">Account successfully created</font>
+    </td>
+	</tr>
+	<tr> 
+		<td>
+      <br />
+      <font size="2" face="Tahoma, Verdana, sans-serif"><b>{if $GENDER != ''}Caro {$GENDER}{else}Ciao{/if} {$NAME},</b><br />
+      <br />
+      il vostro conto &egrave; stato creato con successo.<br />
+      Ora avete accesso alle seguenti funzioni:<br />
+      <br />
+      <b>Carrello</b> - I prodotti inseriti nel carrello rimarranno l&igrave; fino a quando non saranno stati cancellati o acquistati.<br />
+      <br />
+      <b>Rubrica</b> - La rubrica consente di salvare diverse destinazioni di spedizione.<br />
+      <br />
+      <b>Storia dell'ordine</b> - Lo storico dei vostri ordini &egrave; sempre disponibile per voi.<br />
+      <br />
+      <b>Valutazione del prodotto</b> - Valuta e commenta i nostri prodotti.<br />
+      <br />
+      <u>Attenzione:</u> Se questo account non &egrave; stato creato da voi, 
+      vi preghiamo di contattarci a: <a href="mailto:{$content.MAIL_REPLY_ADDRESS}">{$content.MAIL_REPLY_ADDRESS}</a><br />
+
+      {if $SEND_GIFT == true}
+      <br />
+      Come ringraziamento per aver creato il vostro conto, avete ricevuto un <b>{$GIFT_AMMOUNT}</b> buono regalo!<br />
+      <br />
+      Riscatta il tuo buono con il seguente codice <b>{$GIFT_CODE}</b> al momento dell'ordine o semplicemente cliccando il seguente link
+      <a href="{$GIFT_LINK}">[redeem Voucher]</a>.<br />
+      {/if}
+
+      {if $SEND_COUPON == true}
+      <br />
+      Come ringraziamento per aver creato il tuo account, hai ricevuto un buono sconto.<br />
+      I dettagli del voucher sono: <b>{$COUPON_DESC}</b><br />
+      Riscatta il tuo voucher inserendo il codice {$COUPON_CODE} durante il processo di checkout, quando ti viene richiesto.<br />
+      {/if}
+      <br />
+      Se avete domande, contattateci a: <a href="mailto:{$content.MAIL_REPLY_ADDRESS}">{$content.MAIL_REPLY_ADDRESS}</a>
+      </font>
+
+		</td>
+	</tr>
+</table>
+
+[SIGNATUR]
+</div>

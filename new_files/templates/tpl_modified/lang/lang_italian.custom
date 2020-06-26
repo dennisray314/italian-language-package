@@ -1,0 +1,45 @@
+zoomtext = 'Per una visualizzazione pi&ugrave; ampia cliccare sulla miniatura'
+products_desc = 'Descrizione dei prodotti'
+products_fsk18_check = 'Questo articolo pu&ograve; essere acquistato solo dopo la verifica dell'et&agrave;.'
+products_manufacturer_model = 'MPN:'
+products_tags = 'Caratteristiche'
+heading_products_tags = 'Caratteristiche del prodotto'
+
+first = '&laquo; prima'
+back = '&laquo; indietro'
+overview = 'Panoramica'
+next = 'prossimo &raquo;'
+last = 'ultimo &raquo;'
+
+heading_miscellaneous = 'Modalit&agrave; di pagamento'
+text_miscellaneous = 'Die Box kann unter tpl_modified/boxes/box_miscellaneous.html ver&auml;ndert werden. Die Sprachvariablen befinden sich in der Datei tpl_modified/lang/german/lang_german.custom.'
+
+ab_admin = 'Adminarea'
+ab_orders = 'Ordini'
+ab_contentmanager = 'Responsabile dei contenuti'
+ab_customers = 'Clienti'
+ab_category = 'Categoria/Prodotti'
+ab_logoff = 'Logoff'
+ab_news = 'Notizie'
+ab_offline = 'Negozio Offline'
+ab_update = 'Aggiorna'
+ab_support = 'Supporto'
+ab_shop = 'Negozio'
+ab_caching = 'Caching'
+
+ab_edit_content = 'Modificare il contenuto'
+ab_edit_product = 'Modifica prodotto'
+ab_edit_attributes = 'Edit product attributes'
+ab_edit_category = 'Modificare gli attributi del prodotto'
+ab_edit_xsell = 'Modifica vendita incrociata'
+ab_edit_tags = 'Caratteristiche del prodotto'
+
+info_reviews = 'Recensioni:'
+info_review = 'Recensione:'
+
+heading_trustedshops = 'Negozi di fiducia'
+
+text_search_again = 'Siamo spiacenti, non siamo riusciti a trovare un prodotto corrispondente alla vostra richiesta di ricerca'
+
+listing_listview = 'Vista elenco'
+listing_boxview = 'Vista del box'

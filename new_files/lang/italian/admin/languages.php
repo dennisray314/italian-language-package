@@ -1,0 +1,31 @@
+<?php
+define('HEADING_TITLE', 'Lingue');
+define('TABLE_HEADING_LANGUAGE_NAME', 'Lingue');
+define('TABLE_HEADING_LANGUAGE_CODE', 'Codifica');
+define('TABLE_HEADING_ACTION', 'Azione');
+define('TEXT_INFO_EDIT_INTRO', 'Inserisca le necessarie modifiche');
+define('TEXT_INFO_LANGUAGE_NAME', 'Nome:');
+define('TEXT_INFO_LANGUAGE_CODE', 'Codifica:');
+define('TEXT_INFO_LANGUAGE_IMAGE', 'Simbolo:');
+define('TEXT_INFO_LANGUAGE_DIRECTORY', 'Registro:');
+define('TEXT_INFO_LANGUAGE_SORT_ORDER', 'ordine classifica:');
+define('TEXT_INFO_INSERT_INTRO', 'Inserisca una nuova lingua con tutti i dati relativi');
+define('TEXT_INFO_DELETE_INTRO', '&egrave; sicuro di voler cancellare la lingua?');
+define('TEXT_INFO_HEADING_NEW_LANGUAGE', 'Nuova lingua');
+define('TEXT_INFO_HEADING_EDIT_LANGUAGE', 'Salva lingua');
+define('TEXT_INFO_HEADING_DELETE_LANGUAGE', 'cancella lingua');
+define('TEXT_INFO_LANGUAGE_CHARSET','Charset');
+define('TEXT_INFO_LANGUAGE_CHARSET_INFO','meta-content:');
+define('ERROR_REMOVE_DEFAULT_LANGUAGE', 'Errore: La lingua standard non pu&ograve; essere cancellata. Definisca la nuova lingua standard e ripeta la procedura.');
+define('TEXT_INFO_LANGUAGE_STATUS', 'Stato:');
+define('TABLE_HEADING_LANGUAGE_STATUS', 'Stato');
+define('TEXT_INFO_LANGUAGE_STATUS_ADMIN', 'Stato Admin:');
+define('TABLE_HEADING_LANGUAGE_STATUS_ADMIN', 'Stato Admin');
+define ('TEXT_LANGUAGE_TRANSFER_INFO', 'Trasferisci le seguenti tabelle linguistiche');
+define ('TEXT_LANGUAGE_TRANSFER_BTN', 'Trasferisci');
+define ('TEXT_LANGUAGE_TRANSFER_FROM', 'Da');
+define ('TEXT_LANGUAGE_TRANSFER_TO', ' a ');
+define ('TEXT_LANGUAGE_TRANSFER_OK', 'Trasferimento riuscito!');
+define ('TEXT_LANGUAGE_TRANSFER_ERR', 'Selezionare una lingua diversa!');
+define ('TEXT_LANGUAGE_TRANSFER_INFO2', '<strong>ATTENZIONE:</strong> Al momento del trasferimento, i testi esistenti saranno sovrascritti, quindi assicuratevi di fare un backup del database prima di.');
+?>

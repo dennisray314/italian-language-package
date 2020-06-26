@@ -1,0 +1,8 @@
+
+{if $GENDER == 'm'}Caro signor{elseif $GENDER == 'f'}Gentile Signora{else}Buongiorno{/if} {$NAME},
+
+Il codice del voucher che avete acquistato è stato attivato!
+Potete ora riscattare il vostro buono e/o inviarlo a qualcuno via e-mail.
+Il vostro buono vale {$AMMOUNT}.
+
+[SIGNATUR]

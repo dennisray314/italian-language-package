@@ -1,0 +1,36 @@
+<?php
+  define('MODULE_INTERNETMARKE_TEXT_TITLE', 'Francobollo Internet della Deutsche Post');
+  define('MODULE_INTERNETMARKE_TEXT_DESCRIPTION', 'Creazione di etichette per Deutsche Post Internetmarke');
+  define('MODULE_INTERNETMARKE_TEXT_DESCRIPTION_UPLOAD', 'Aggiornamento dei prezzi');
+  define('MODULE_INTERNETMARKE_TEXT_DESCRIPTION_CARRIER', 'Installare Deutsche Post come vettore.');
+  define('BUTTON_IM_INSTALL', 'Installare il supporto');
+  define('BUTTON_IM_UPDATE', 'Aggiornamento dei dati sui prezzi');
+  define('MODULE_INTERNETMARKE_STATUS_TITLE','Stato');
+  define('MODULE_INTERNETMARKE_STATUS_DESC','Stato del modulo');
+  define('MODULE_INTERNETMARKE_PORTO_USER_TITLE', 'Utenti di piccole somme di denaro contante');
+  define('MODULE_INTERNETMARKE_PORTO_USER_DESC', 'Si prega di inserire l\'utente della piccola cassa.');
+  define('MODULE_INTERNETMARKE_PORTO_PASS_TITLE', 'Password per i piccoli contanti');
+  define('MODULE_INTERNETMARKE_PORTO_PASS_DESC', 'Si prega di inserire la password per la piccola cassa.');
+  define('MODULE_INTERNETMARKE_CARRIER_TITLE', 'Servizio pacchi');
+  define('MODULE_INTERNETMARKE_CARRIER_DESC', 'Inserisci il servizio pacchi.');
+  define('MODULE_INTERNETMARKE_COMPANY_TITLE', '<hr><br>Azienda');
+  define('MODULE_INTERNETMARKE_COMPANY_DESC', 'Si prega di inserire l\'azienda.');
+  define('MODULE_INTERNETMARKE_FIRSTNAME_TITLE', 'Nome');
+  define('MODULE_INTERNETMARKE_FIRSTNAME_DESC', 'Inserire il nome.');
+  define('MODULE_INTERNETMARKE_LASTNAME_TITLE', 'Cognome');
+  define('MODULE_INTERNETMARKE_LASTNAME_DESC', 'Inserire il cognome.');
+  define('MODULE_INTERNETMARKE_STREET_TITLE', 'Indirizzo');
+  define('MODULE_INTERNETMARKE_STREET_DESC', 'Inserire l\'indirizzo.');
+  define('MODULE_INTERNETMARKE_SUBURB_TITLE', 'Indirizzo aggiuntivo');
+  define('MODULE_INTERNETMARKE_SUBURB_DESC', 'Inserire l\'indirizzo aggiuntivo.');
+  define('MODULE_INTERNETMARKE_PLZ_TITLE', 'Codice postale');
+  define('MODULE_INTERNETMARKE_PLZ_DESC', 'Inserire il codice postale.');
+  define('MODULE_INTERNETMARKE_CITY_TITLE', 'Citt&agrave;');
+  define('MODULE_INTERNETMARKE_CITY_DESC', 'Inserisci la citt&agrave;.');
+  define('MODULE_INTERNETMARKE_PAGEFORMAT_TITLE', '<hr><br><b>Formato cartaceo</b><br>');
+  define('MODULE_INTERNETMARKE_PAGEFORMAT_DESC', 'Si prega di selezionare il formato della carta.<br>');
+  define('MODULE_INTERNETMARKE_PRICE_TITLE', '<hr><br><b>Formato di spedizione</b><br>');
+  define('MODULE_INTERNETMARKE_PRICE_DESC', 'Selezionare il formato di invio.<br>');
+  define('MODULE_INTERNETMARKE_TEXT_UPDATE_SUCCESS', 'Dati sui prezzi aggiornati con successo.');
+  define('MODULE_INTERNETMARKE_TEXT_UPDATE_ERROR', 'Non &egrave; stato possibile aggiornare i dati relativi ai prezzi.');
+?>

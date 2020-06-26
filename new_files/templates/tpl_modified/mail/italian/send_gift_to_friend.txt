@@ -1,0 +1,14 @@
+----------------------------------------------------------------------------------------
+  Complimeti, Lei ha ricevuto un buono che ammonta a {$AMMOUNT} !
+----------------------------------------------------------------------------------------
+
+Questo buon le è stato inviato da {$FROM_NAME},
+Con il messaggio:
+
+{$MESSAGE}
+
+Il suo codice personale del buono è {$GIFT_CODE}. 
+
+Può riscuotere il buono facendo clic su {$GIFT_LINK}
+
+[SIGNATUR]

@@ -1,0 +1,50 @@
+<div style="width:700px;margin: 0px auto;">
+<table width="700" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr> 
+      <td align="center" style="padding: 10px 0px;"><img src="{$logo_path}logo.gif" /></td>
+  </tr>
+  <tr> 
+      <td style="font-size:14px;text-transform:uppercase;padding:10px 5px;border-top: 1px dotted #999;border-bottom: 1px dotted #999;">
+        <font face="Tahoma, Verdana, sans-serif">Lo stato del vostro ordine &egrave; stato modificato</font>
+      </td>
+  </tr>
+  <tr> 
+    <td>
+        <br />
+        <font size="2" face="Tahoma, Verdana, sans-serif"><b>{if $GENDER == $smarty.const.MALE}Caro signor{elseif $GENDER == $smarty.const.FEMALE}Gentile Signora{else}Buongiorno{/if} {$NAME},</b>
+        <br /><br />
+        Lo stato del vostro ordine {if $ORDER_NR}No. {$ORDER_NR}{/if} {if $ORDER_DATE}da {$ORDER_DATE}{/if} &egrave; stato cambiato.
+        
+        {if $ORDER_LINK}
+          <br /><br />
+          Collegamento all'ordine:<a href="{$ORDER_LINK}">clicca qui</a>
+        {/if}
+                
+        {if $NOTIFY_COMMENTS}
+          <br /><br />
+          Note per il vostro ordine:<br />
+          {$NOTIFY_COMMENTS}
+        {/if}        
+        
+        <br /><br />
+        Nuovo status: <b>{$ORDER_STATUS}</b>
+
+        {if $PARCEL_COUNT > 0}
+          <br /><br />
+          La vostra spedizione consiste in {$PARCEL_COUNT} pacco/i.<br />
+          Potete informarvi sullo stato di consegna con un clic sui seguenti numeri di pacco:<br />
+          {foreach name=aussen item=tracking_data from=$PARCEL_ARRAY}
+            <a target="_blank" href="{$tracking_data.tracking_link}">{$tracking_data.parcel_id}</a><br />
+          {/foreach}
+        {/if}
+
+        <br /><br />
+        Se avete domande, vi preghiamo di rispondere a questa e-mail.        
+        
+        </font>
+    </td>
+  </tr>
+</table>
+
+[SIGNATUR]
+</div>

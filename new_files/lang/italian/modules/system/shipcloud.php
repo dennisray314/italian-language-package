@@ -1,0 +1,53 @@
+<?php
+if (defined('_VALID_XTC')) {
+  define('MODULE_SHIPCLOUD_TEXT_TITLE', 'shipcloud - la nuova generazione di spedizione pacchi');
+  define('MODULE_SHIPCLOUD_TEXT_DESCRIPTION', 'Stampare le etichette dei pacchi direttamente dal negozio.');
+  define('MODULE_SHIPCLOUD_STATUS_TITLE', 'Stato');
+  define('MODULE_SHIPCLOUD_STATUS_DESC', 'Attivare il modulo?');
+  define('MODULE_SHIPCLOUD_API_TITLE', '<hr noshade>API');
+  define('MODULE_SHIPCLOUD_API_DESC', 'Chiave API di shipcloud');
+  define('MODULE_SHIPCLOUD_PARCEL_TITLE', '<hr noshade>Pacchetti');
+  define('MODULE_SHIPCLOUD_PARCEL_DESC', 'Si prega di definire i pacchetti in questo modo: lunghezza, larghezza, altezza;<br/>&Egrave; possibile definire pi&ugrave; dimensioni separate da punto e virgola (;). Esemplare: 20,40,30;15,20,20;');
+  define('MODULE_SHIPCLOUD_COMPANY_TITLE', '<hr noshade>Dettagli del cliente<br/>');
+  define('MODULE_SHIPCLOUD_COMPANY_DESC', 'Azienda:');
+  define('MODULE_SHIPCLOUD_FIRSTNAME_TITLE', '');
+  define('MODULE_SHIPCLOUD_FIRSTNAME_DESC', 'Nome:');
+  define('MODULE_SHIPCLOUD_LASTNAME_TITLE', '');
+  define('MODULE_SHIPCLOUD_LASTNAME_DESC', 'Cognome:');
+  define('MODULE_SHIPCLOUD_ADDRESS_TITLE', '');
+  define('MODULE_SHIPCLOUD_ADDRESS_DESC', 'Indirizzo:');
+  define('MODULE_SHIPCLOUD_POSTCODE_TITLE', '');
+  define('MODULE_SHIPCLOUD_POSTCODE_DESC', 'Zip:');
+  define('MODULE_SHIPCLOUD_CITY_TITLE', '');
+  define('MODULE_SHIPCLOUD_CITY_DESC', 'Citt&agrave;:');
+  define('MODULE_SHIPCLOUD_TELEPHONE_TITLE', '');
+  define('MODULE_SHIPCLOUD_TELEPHONE_DESC', 'Telefono:');
+  define('MODULE_SHIPCLOUD_ACCOUNT_IBAN_TITLE', '');
+  define('MODULE_SHIPCLOUD_ACCOUNT_IBAN_DESC', 'IBAN:');
+  define('MODULE_SHIPCLOUD_ACCOUNT_BIC_TITLE', '');
+  define('MODULE_SHIPCLOUD_ACCOUNT_BIC_DESC', 'BIC:');
+  define('MODULE_SHIPCLOUD_BANK_NAME_TITLE', '<hr noshade>Coordinate bancarie<br/>');
+  define('MODULE_SHIPCLOUD_BANK_NAME_DESC', 'Banca:');
+  define('MODULE_SHIPCLOUD_BANK_HOLDER_TITLE', '');
+  define('MODULE_SHIPCLOUD_BANK_HOLDER_DESC', 'Titolare:');
+  define('MODULE_SHIPCLOUD_LOG_TITLE', '<hr noshade>Log');
+  define('MODULE_SHIPCLOUD_LOG_DESC', 'il file di log &egrave; memorizzato nella cartella / log.');
+  define('MODULE_SHIPCLOUD_EMAIL_TITLE', '<hr noshade>Notifica via e-mail');
+  define('MODULE_SHIPCLOUD_EMAIL_DESC', 'Avvisare il cliente via e-mail?');
+  define('MODULE_SHIPCLOUD_EMAIL_TYPE_TITLE', '<hr noshade>Notifica');
+  define('MODULE_SHIPCLOUD_EMAIL_TYPE_DESC', 'Se il cliente deve essere avvisato dal Negozio o dalla shipcloud?<br><Nota:</b>Per una notifica dal Negozio deve impostare un Webhook a questo URL: '.xtc_catalog_href_link('callback/shipcloud/callback.php', '', 'SSL', false).' in shipcloud.');
+}
+define('SHIPMENT.TRACKING.SHIPCLOUD_LABEL_CREATED', 'Spedizione creata in shipcloud');
+define('SHIPMENT.TRACKING.LABEL_CREATED', '&Egrave; stata creata un\'etichetta');
+define('SHIPMENT.TRACKING.PICKED_UP', 'La spedizione &egrave; stata ritirata dal vettore');
+define('SHIPMENT.TRACKING.TRANSIT', 'La spedizione &egrave; in transito');
+define('SHIPMENT.TRACKING.OUT_FOR_DELIVERY', 'Fuori per la consegna');
+define('SHIPMENT.TRACKING.DELIVERED', 'Consegnato');
+define('SHIPMENT.TRACKING.AWAITS_PICKUP_BY_RECEIVER', 'In attesa del ritiro da parte del ricevitore');
+define('SHIPMENT.TRACKING.CANCELED', 'l\'etichetta &egrave; stata cancellata');
+define('SHIPMENT.TRACKING.DELAYED', 'La consegna sar&agrave; ritardata');
+define('SHIPMENT.TRACKING.EXCEPTION', 'C\'&egrave; un problema con la spedizione');
+define('SHIPMENT.TRACKING.NOT_DELIVERED', 'Non consegnato');
+define('SHIPMENT.TRACKING.NOTIFICATION', 'Notifica interna del vettore: Gli eventi di tracciamento all\'interno della spedizione porteranno informazioni pi&ugrave; elaborate.');
+define('SHIPMENT.TRACKING.UNKNOWN', 'Stato sconosciuto');
+?>

@@ -1,0 +1,4 @@
+
+{$PAYMENT_INFO_TXT}
+
+[SIGNATUR]

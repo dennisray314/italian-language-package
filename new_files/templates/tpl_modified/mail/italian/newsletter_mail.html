@@ -1,0 +1,49 @@
+<div style="width:700px;margin: 0px auto;">
+<table width="700" border="0" align="center" cellpadding="5" cellspacing="0">
+	<tr> 
+    	<td align="center" style="padding: 10px 0px;"><img src="{$logo_path}logo.gif" /></td>
+	</tr>
+	<tr> 
+    <td style="font-size:14px;text-transform:uppercase;padding:10px 5px;border-top: 1px dotted #999;border-bottom: 1px dotted #999;">
+      <font face="Tahoma, Verdana, sans-serif">Grazie per la sottoscrizione</font>
+    </td>
+	</tr>
+	<tr> 
+		<td>
+      <br />
+      <font size="2" face="Tahoma, Verdana, sans-serif"><b>Grazie per la sottoscrizione!</b><br />
+			<br />
+			{if isset($LINK)}
+			Ricevi questa e-mail perch&egrave; vuoi ricevere la nostra newsletter.<br />
+			<br />
+      Cliccare il seguente link di attivazione per ricevere le newsletter. Se non ti sei iscritto a questo servizio, ignora questa e-mail!<br />
+      <br />
+      <b>Il vostro link di attivazione:</b><br />
+      <a href="{$LINK}">{$LINK}</a><br />
+      <br />
+      Se non vi siete registrati alla nostra newsletter o non desiderate ricevere la newsletter, ignorate il link di attivazione.<br />
+      <br />
+      Il vostro consenso all'invio della nostra newsletter &egrave; revocabile in qualsiasi momento. La newsletter viene inviata secondo la nostra politica sulla privacy.<br />
+      {/if}
+
+      {if $SEND_GIFT == true}
+      <br />
+      Come ringraziamento per aver creato il vostro conto, avete ricevuto un <b>{$GIFT_AMMOUNT}</b> buono regalo!<br />
+      <br />
+      Riscatta il tuo buono con il seguente codice <b>{$GIFT_CODE}</b> al momento dell'ordine o semplicemente cliccando il seguente link
+      <a href="{$GIFT_LINK}">[redeem Voucher]</a>.<br />
+      {/if}
+
+      {if $SEND_COUPON == true}
+      <br />
+      Come ringraziamento per aver creato il tuo account, hai ricevuto un buono sconto.<br />
+      I dettagli del voucher sono: <b>{$COUPON_DESC}</b><br />
+      Riscatta il tuo voucher inserendo il codice {$COUPON_CODE} durante il processo di checkout, quando ti viene richiesto.<br />
+      {/if}
+      </font>
+		</td>
+	</tr>
+</table>
+
+[SIGNATUR]
+</div>

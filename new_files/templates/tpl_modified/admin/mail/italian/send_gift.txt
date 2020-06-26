@@ -1,0 +1,13 @@
+
+{$MESSAGE}
+  
+Valore del buono  {$AMMOUNT}
+    
+Il vostro codice del voucher è: {$GIFT_ID} 
+
+Riscattate il vostro buono semplicemente cliccando il seguente link - {$GIFT_LINK}
+
+Se si dovessero presentare problemi al momento della registrazione.        
+Visiti la nostra pagine Web  {$WEBSITE} ed inserisca il codice del buono manualmente.
+
+[SIGNATUR]

@@ -1,0 +1,31 @@
+<?php
+define('HEADING_TITLE', 'Zone d\'imposta');
+define('TABLE_HEADING_COUNTRY', 'Paese');
+define('TABLE_HEADING_COUNTRY_ZONE', 'Provincia');
+define('TABLE_HEADING_TAX_ZONES', 'zone d\'imposta');
+define('TABLE_HEADING_ACTION', 'Azione');
+define('TEXT_INFO_HEADING_NEW_ZONE', 'Nuova zona d\'imposta');
+define('TEXT_INFO_NEW_ZONE_INTRO', 'Inserisca la nuova zona d\'imposta con tutti i dati relativi');
+define('TEXT_INFO_HEADING_EDIT_ZONE', 'Salva zona d\'imposta');
+define('TEXT_INFO_EDIT_ZONE_INTRO', 'Inserisca i necessari cambiamenti.');
+define('TEXT_INFO_HEADING_DELETE_ZONE', 'Cancella zona d\'imposta');
+define('TEXT_INFO_DELETE_ZONE_INTRO', '&egrave; sicuro di voler cancellare questa zona d\'imposta?');
+define('TEXT_INFO_HEADING_NEW_SUB_ZONE', 'Nuova sottozona');
+define('TEXT_INFO_NEW_SUB_ZONE_INTRO', 'Inserisca la nuova sottozona con tutti i dati relativi');
+define('TEXT_INFO_HEADING_EDIT_SUB_ZONE', 'elabora sottozona');
+define('TEXT_INFO_EDIT_SUB_ZONE_INTRO', 'Inserisca tutte le modifiche necessarie.');
+define('TEXT_INFO_HEADING_DELETE_SUB_ZONE', 'Cancella sottozona');
+define('TEXT_INFO_DELETE_SUB_ZONE_INTRO', '&egrave; sicuro di voler cancellare questa sottozona?');
+define('TEXT_INFO_DATE_ADDED', 'inserita il:');
+define('TEXT_INFO_LAST_MODIFIED', 'Ultima modifica:');
+define('TEXT_INFO_ZONE_NAME', 'Nome della zona d\'imposta:');
+define('TEXT_INFO_NUMBER_ZONES', 'numero delle zone d\'imposta:');
+define('TEXT_INFO_ZONE_DESCRIPTION', 'Descrizione:');
+define('TEXT_INFO_COUNTRY', 'Paese:');
+define('TEXT_INFO_COUNTRY_ZONE', 'Provincia:');
+define('TYPE_BELOW', 'tutte le Provincie');
+define('PLEASE_SELECT', 'Tutte le Provincie');
+define('TEXT_ALL_COUNTRIES', 'Tutti i paesi');
+define('TEXT_INFO_ZONE_INFO', 'Mostra le informazioni di servizio per questa zona?');
+define('TEXT_INFO_ZONE_INFO_DEFAULT', 'Informazioni sul servizio selezionato.');
+?>

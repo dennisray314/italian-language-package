@@ -1,0 +1,41 @@
+<div style="width:700px;margin: 0px auto;">
+<table width="700" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr> 
+      <td align="center" style="padding: 10px 0px;"><img src="{$logo_path}logo.gif" /></td>
+  </tr>
+  <tr> 
+      <td style="font-size:14px;text-transform:uppercase;padding:10px 5px;border-top: 1px dotted #999;border-bottom: 1px dotted #999;">
+        <font face="Tahoma, Verdana, sans-serif">Abbiamo appena creato il tuo conto cliente</font>
+      </td>
+  </tr>
+  <tr> 
+    <td>
+        <br />
+        <font size="2" face="Tahoma, Verdana, sans-serif"><b>{if $GENDER == 'm'}Caro signor{elseif $GENDER == 'f'}Gentile Signora{else}Buongiorno{/if} {$NAME},</b>
+        <br /><br />
+        abbiamo appena creato il vostro conto cliente.
+        
+        {if $COMMENTS} 
+          <br /><br />
+          Note: {$COMMENTS} 
+        {/if}
+
+        <br /><br />
+         Puoi accedere al nostro negozio con il tuo indirizzo e-mail e la tua password:<br />
+        <br />
+        </font>
+        <table width="100%"  border="0" bgcolor="f1f1f1" cellpadding="5">
+          <tr>
+            <td><font size="2" face="Tahoma, Verdana, sans-serif"><b>Il tuo indirizzo e-mail:</b> {$EMAIL}</font></td>
+          </tr>
+          <tr>
+            <td><font size="2" face="Tahoma, Verdana, sans-serif"><b>La tua password:</b> {$PASSWORD}</font></td>
+          </tr>
+        </table>
+
+    </td>
+  </tr>
+</table>
+
+[SIGNATUR]
+</div>

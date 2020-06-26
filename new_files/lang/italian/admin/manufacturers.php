@@ -1,0 +1,30 @@
+<?php
+define('HEADING_TITLE', 'Produttore');
+define('TABLE_HEADING_MANUFACTURERS', 'Produttore');
+define('TABLE_HEADING_ACTION', 'Azione');
+define('TEXT_HEADING_NEW_MANUFACTURER', 'Nuovo produttore');
+define('TEXT_HEADING_EDIT_MANUFACTURER', 'Salva produttore');
+define('TEXT_HEADING_DELETE_MANUFACTURER', 'cancella produttore');
+define('TEXT_MANUFACTURERS', 'Produttore:');
+define('TEXT_DATE_ADDED', 'aggiunto il:');
+define('TEXT_LAST_MODIFIED', 'ultima modifica il:');
+define('TEXT_PRODUCTS', 'Articolo:');
+define('TEXT_IMAGE_NONEXISTENT', 'IMMAGINE NON DISPONIBILE');
+define('TEXT_NEW_INTRO', 'Inserisca un nuovo produttore con tutti i dati relativi.');
+define('TEXT_EDIT_INTRO', 'inserisca le necessarie modifiche');
+define('TEXT_MANUFACTURERS_NAME', 'nome produttore:');
+define('TEXT_MANUFACTURERS_IMAGE', 'immagine produttore:');
+define('TEXT_MANUFACTURERS_URL', 'URL produttore:');
+define('TEXT_DELETE_INTRO', '&egrave; sicuro di voler cancellare questo produttore?');
+define('TEXT_DELETE_IMAGE', 'cancella Image produttore?');
+define('TEXT_DELETE_PRODUCTS', 'cancella tutti gli articoli di questo produttore? (incluso valutazioni, Offerte e nuove pubblicate)');
+define('TEXT_DELETE_WARNING_PRODUCTS', '<b>AVVISO:</b> Esistono ancora %s Articoli, che sono collegati a questo produttore!');
+define('ERROR_DIRECTORY_NOT_WRITEABLE', 'Errore:il registro %s &egrave; protetto da scrittura. Corregga le vie d\'accesso per questo registro!');
+define('ERROR_DIRECTORY_DOES_NOT_EXIST', 'Errore: il registro %s non esiste!');
+define('TEXT_CHARACTERS','Segnaletica');
+define('TEXT_META_TITLE', 'Meta Titolo:');
+define('TEXT_META_DESCRIPTION', 'Meta Descrizione:');
+define('TEXT_META_KEYWORDS', 'Meta Parole chiave:');
+define('TEXT_MANUFACTURERS_DESCRIPTION', 'Descrizione del produttore:');
+define('TEXT_DELETE', 'Cancellare');
+?>

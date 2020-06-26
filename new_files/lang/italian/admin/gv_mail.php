@@ -1,0 +1,32 @@
+<?php
+define('HEADING_TITLE', 'Invia buono al cliente');
+define('HEADING_COUPON_TITLE', 'Inviare il coupon ai clienti');
+define('TEXT_CUSTOMER_GROUP', 'Gruppo clienti:');
+define('TEXT_CUSTOMER', 'cliente:');
+define('TEXT_SUBJECT', 'oggetto:');
+define('TEXT_FROM', 'Mittente:');
+define('TEXT_TO', 'destinatario:');
+define('TEXT_AMOUNT', 'Valore:');
+define('TEXT_MESSAGE', 'Messaggio:');
+define('TEXT_SINGLE_EMAIL', '<span class="smallText">Utilizzi questo campo solo per le singole e-mail, altrimenti utilizzi il campo '.TEXT_CUSTOMER.'</span>');
+define('TEXT_SELECT_CUSTOMER_GROUP', 'seleziona cliente');
+define('TEXT_ALL_CUSTOMERS', 'Tutti i clienti');
+define('TEXT_NEWSLETTER_CUSTOMERS', 'circolare a tutti gli abbonati');
+define('NOTICE_EMAIL_SENT_TO', 'Info: l\'email &egrave; stata inviata a: %s');
+define('ERROR_NO_CUSTOMER_SELECTED', 'Errore: Non &egrave; stato selezionato nessun cliente.');
+define('ERROR_NO_AMOUNT_SELECTED', 'Errore: Non ha indicato nessun importo per il buono.');
+define('TEXT_GV_WORTH', 'Il valore del buono comprende');
+define('TEXT_TO_REDEEM', 'Per utilizzare il suo buono, faccia clic al link sotto. Per sicurezza si annoti il suo codice personale del buono.');
+define('TEXT_WHICH_IS', 'codice del suo buono &egrave;: ');
+define('TEXT_IN_CASE', ' Se ci sono problemi per la registrazione.');
+define('TEXT_OR_VISIT', 'Visiti la nostra pagina Web');
+define('TEXT_ENTER_CODE', ' e inserisca manualmente il codice del suo buono');
+define ('TEXT_REDEEM_COUPON_MESSAGE_HEADER', 'Ha appena acquistato nel nostro Online-Shop un buono, il quale per motivi di sicurezza non &egrave; stato reso immediatamente disponibile. Questo buono &egrave; ora a sua disposizione.');
+define ('TEXT_REDEEM_COUPON_MESSAGE_AMOUNT', "\n\n" . 'Il valore del buono &egrave; di %s');
+define ('TEXT_REDEEM_COUPON_MESSAGE_BODY', "\n\n" . 'Attraverso il suo conto personale pu&ograve; inviare il buono a chiunque.');
+define ('TEXT_REDEEM_COUPON_MESSAGE_FOOTER', "\n\n");
+define('COUPON_INFO', "\nImporto del buono: "); 
+define('COUPON_FREE_SHIPPING', 'Spedizione gratuita');
+define('COUPON_MINORDER_INFO', "\nOrdine minimo di coupon: ");
+define('COUPON_RESTRICT_INFO', "\nQuesto coupon &egrave; valido solo per alcuni prodotti!"); 
+?>

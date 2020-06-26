@@ -1,0 +1,27 @@
+
+{if $GENDER == $smarty.const.MALE}Caro signor{elseif $GENDER == $smarty.const.FEMALE}Gentile Signora{else}Buongiorno{/if} {$NAME},
+
+Lo stato del vostro ordine {if $ORDER_NR}No. {$ORDER_NR}{/if} {if $ORDER_DATE}da {$ORDER_DATE}{/if} è stato cambiato.
+
+{if $ORDER_LINK}
+	Collegamento all'ordine:{$ORDER_LINK}
+{/if}
+
+{if $NOTIFY_COMMENTS}
+	Note per il vostro ordine:
+	{$NOTIFY_COMMENTS}
+{/if}        
+
+Nuovo status: {$ORDER_STATUS}
+
+{if $PARCEL_COUNT > 0}
+La vostra spedizione consiste in {$PARCEL_COUNT} pacco/i.
+Potete informarvi sullo stato di consegna con un clic sui seguenti numeri di pacco:
+{foreach name=aussen item=tracking_data from=$PARCEL_ARRAY}
+{$tracking_data.tracking_link}
+{/foreach}
+{/if}
+
+Se avete domande, vi preghiamo di rispondere a questa e-mail.        
+
+[SIGNATUR]

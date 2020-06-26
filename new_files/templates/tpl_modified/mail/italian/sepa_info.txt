@@ -1,0 +1,8 @@
+L'importo della fattura di  {$PAYMENT_BANKTRANSFER_TOTAL} sarà riscosso utilizzando il SEPA Direct
+Addebito diretto con scadenza {$PAYMENT_BANKTRANSFER_DUE_DATE}
+con mandato {$PAYMENT_BANKTRANSFER_MANDATE_REFERENCE}
+e per l'identificativo del creditore {$PAYMENT_BANKTRANSFER_CREDITOR_ID}
+dal tuo conto {$PAYMENT_BANKTRANSFER_IBAN}
+all'indirizzo {$PAYMENT_BANKTRANSFER_BANKNAME}.
+
+Assicuratevi che ci siano fondi sufficienti sul vostro conto per coprire il pagamento.

@@ -1,0 +1,32 @@
+<?php
+define('HEADING_TITLE_OPT', 'Opzioni del prodotto');
+define('HEADING_TITLE_VAL', 'Valori di opzione');
+define('HEADING_TITLE_ATRIB', 'Attributi dei prodotti');
+define('TABLE_HEADING_ID', 'ID');
+define('TABLE_HEADING_PRODUCT', 'Nome del prodotto');
+define('TABLE_HEADING_OPT_NAME', 'Nome dell\'opzione');
+define('TABLE_HEADING_OPT_VALUE', 'Valore dell\'opzione');
+define('TABLE_HEADING_ACTION', 'Azione');
+define('TABLE_HEADING_SORTORDER', 'Ordinamento');
+define('TEXT_INFO_SEARCH', 'Ricerca: ');
+define('TEXT_INFO_OPTION_NAME', 'Nome:');
+define('TEXT_INFO_OPTION_SORT', 'Ordina:');
+define('TEXT_INFO_NUMBER_OPTION', 'Numero di valori:');
+define('TEXT_INFO_HEADING_NEW_OPTION', 'Nuova funzione');
+define('TEXT_INFO_NEW_OPTION_INTRO', 'Si prega di inserire la nuova funzione con tutti i dati rilevanti');
+define('TEXT_INFO_HEADING_EDIT_OPTION', 'Funzione di modifica');
+define('TEXT_INFO_EDIT_OPTION_INTRO', 'Si prega di apportare le modifiche necessarie.');
+define('TEXT_INFO_HEADING_DELETE_OPTION', 'Cancellare la funzione');
+define('TEXT_INFO_DELETE_OPTION_INTRO', 'Sei sicuro di voler cancellare questa funzione?');
+define('TEXT_WARNING_OF_DELETE', 'Questa opzione ha prodotti e valori ad essa collegati - non &egrave; sicuro cancellarla.');
+define('TEXT_DISPLAY_NUMBER_OF_OPTIONS', 'Visualizzazione da <b>%d</b> a <b>%d</b> (di <b>%d</b> caratteristiche)');
+define('TEXT_INFO_VALUE_NAME', 'Valore:');
+define('TEXT_INFO_VALUE_SORT', 'Ordina:');
+define('TEXT_INFO_HEADING_NEW_VALUE', 'Nuovo valore');
+define('TEXT_INFO_NEW_VALUE_INTRO', 'Si prega di inserire la nuova valua con tutti i dati rilevanti');
+define('TEXT_INFO_HEADING_EDIT_VALUE', 'Modifica valore');
+define('TEXT_INFO_EDIT_VALUE_INTRO', 'Si prega di apportare le modifiche necessarie.');
+define('TEXT_INFO_HEADING_DELETE_VALUE', 'Cancellare il valore');
+define('TEXT_INFO_DELETE_VALUE_INTRO', 'Sei sicuro di voler cancellare questo valore?');
+define('TEXT_DISPLAY_NUMBER_OF_VALUES', 'Visualizzazione da <b>%d</b> a <b>%d</b> (di <b>%d</b> valori)');
+?>
