@@ -25,5 +25,5 @@
   define('INFO_NEWSLETTER_LEFT', '%d newsletter rimanenti');
   // EOF - DokuMan - 2011-12-12 - Texts for Newsletter E-Mail send status
   define('TEXT_NEWSLETTER_INFO', '<strong>ATTENZIONE:</strong> Per l\'invio di newsletter, si consiglia l\'uso di programmi esterni! <br /><br />Se si utilizza il modulo Newsletter Shop, dovrebbe essere richiesto al provider, quante e-mail possono essere inviate in un determinato momento a tutti.<br />Con molti provider, ci sono restrizioni o l\'invio &egrave; consentito solo da speciali server di posta elettronica.<br /><br /><br />Per impostazione predefinita la firma viene allegata automaticamente. Se volete formattare la firma in un formato diverso da quello standard, aggiungete il codice [NOSIGNATUR] (incl. parentesi quadre) alla fine della vostra newsletter..');
-
+define('TEXT_INFO_SENDING', 'Si prega di attendere, la newsletter &egrave; in fase di invio. Questo pu&ograve; richiedere del tempo.');
 ?>

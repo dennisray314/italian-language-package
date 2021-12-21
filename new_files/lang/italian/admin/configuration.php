@@ -24,8 +24,8 @@ define('EXPECTED_PRODUCTS_FIELD_TITLE' , ' campo zona per la rendere nota la con
 define('EXPECTED_PRODUCTS_FIELD_DESC' , 'questo &egrave; lo spazio per specificare la notifica dell\'articolo.');
 define('USE_DEFAULT_LANGUAGE_CURRENCY_TITLE' , 'adattare automaticamente la moneta nazionale');
 define('USE_DEFAULT_LANGUAGE_CURRENCY_DESC' , ' Se sar&agrave; cambiato la lingua verr&agrave; modificata automaticamente il tipo di moneta.');
-define('SEND_EXTRA_ORDER_eMailS_TO_TITLE' , 'Invio di una extra e-mail d\'ordine:');
-define('SEND_EXTRA_ORDER_eMailS_TO_DESC' , 'se sar&agrave; inviata una copia supplementare dell\'e-mail d\'ordine, mettere in lista l\'indirizzo ricevuto nel seguente modo: Nome 1 &lt;eMail@indirizzo1&gt;, Nome 2 &lt;eMail@indirizzo2&gt;');
+define('SEND_EXTRA_ORDER_EMAILS_TO_TITLE' , 'Invio di una extra e-mail d\'ordine:');
+define('SEND_EXTRA_ORDER_EMAILS_TO_DESC' , 'se sar&agrave; inviata una copia supplementare dell\'e-mail d\'ordine, mettere in lista l\'indirizzo ricevuto nel seguente modo: Nome 1 &lt;eMail@indirizzo1&gt;, Nome 2 &lt;eMail@indirizzo2&gt;');
 define('SEARCH_ENGINE_FRIENDLY_URLS_TITLE' , 'Utilizzare i motore di ricerca URLs?');
 define('SEARCH_ENGINE_FRIENDLY_URLS_DESC' , 'Le pagine URLs possono essere indicate automaticamente per il motore di ricerca.');
 define('DISPLAY_CART_TITLE' , 'Il carrello merce deve essere mostrato dopo l\'inserimento della merce?');
@@ -122,6 +122,8 @@ define('MAX_DISPLAY_BESTSELLERS_DAYS_TITLE' , 'Et&agrave; massima (giorni) per i
 define('MAX_DISPLAY_BESTSELLERS_DAYS_DESC' , 'Et&agrave; massima (in giorni) per i prodotti da esporre come "Best Sellers"');
 define('MAX_DISPLAY_ALSO_PURCHASED_TITLE' , 'Molto comprati');
 define('MAX_DISPLAY_ALSO_PURCHASED_DESC' , 'Numero massimo degli articoli molto comprati da mostrare nella lista');
+define('MAX_DISPLAY_ALSO_PURCHASED_ORDERS_TITLE' , 'Numero di ordini Acquistati anche');
+define('MAX_DISPLAY_ALSO_PURCHASED_ORDERS_DESC' , 'Numero massimo di ordini per cercare anche prodotti acquistati');
 define('MAX_DISPLAY_PRODUCTS_IN_ORDER_HISTORY_BOX_TITLE' , 'Box tavola ordinazioni');
 define('MAX_DISPLAY_PRODUCTS_IN_ORDER_HISTORY_BOX_DESC' , 'Numero massimo di articoli da mostrare nell\'ordinazione personale del cliente.');
 define('MAX_DISPLAY_ORDER_HISTORY_TITLE' , 'Tavola ordinazioni');
@@ -130,10 +132,18 @@ define('MAX_PRODUCTS_QTY_TITLE', 'Numero massimo di prodotti');
 define('MAX_PRODUCTS_QTY_DESC', 'Numero massimo di prodotti da inserire');
 define('MAX_DISPLAY_NEW_PRODUCTS_DAYS_TITLE' , 'Quantit&agrave; giornaliera per nuovi prodotti');
 define('MAX_DISPLAY_NEW_PRODUCTS_DAYS_DESC' , 'Massimo numero di nuovi articoli da mostrare al giorno');
+define('PRODUCT_IMAGE_MINI_WIDTH_TITLE' , 'Larghezza delle mini immagini del prodotto');
+define('PRODUCT_IMAGE_MINI_WIDTH_DESC' , 'Larghezza massima del mini prodotto (in pixel) (Standard: 80). Per valori pi&ugrave; grandi eventualmente "productPreviewImage" &egrave; regolato nel file stylesheet.css dei template.');
+define('PRODUCT_IMAGE_MINI_HEIGHT_TITLE' , 'Altezza delle mini immagini del prodotto');
+define('PRODUCT_IMAGE_MINI_HEIGHT_DESC' , 'Altezza massima del prodotto mini (in pixel) (Standard: 80)');
 define('PRODUCT_IMAGE_THUMBNAIL_WIDTH_TITLE' , 'Larghezza del Thumbnail dell\'articolo');
 define('PRODUCT_IMAGE_THUMBNAIL_WIDTH_DESC' , 'Larghezza massima del Thumbnail dell\'articolo in Pixel');
 define('PRODUCT_IMAGE_THUMBNAIL_HEIGHT_TITLE' , 'Altezza del Thumbnail dell\'articolo');
 define('PRODUCT_IMAGE_THUMBNAIL_HEIGHT_DESC' , 'Altezza massima del Thumbnail dell\'articolo in Pixel');
+define('PRODUCT_IMAGE_MIDI_WIDTH_TITLE' , 'Larghezza delle midi immagini del prodotto');
+define('PRODUCT_IMAGE_MIDI_WIDTH_DESC' , 'Larghezza massima del midi prodotto (in pixel) (Standard: 160). Per valori pi&ugrave; grandi eventualmente "productPreviewImage" &egrave; regolato nel file stylesheet.css dei template.');
+define('PRODUCT_IMAGE_MIDI_HEIGHT_TITLE' , 'Altezza delle midi immagini del prodotto');
+define('PRODUCT_IMAGE_MIDI_HEIGHT_DESC' , 'Altezza massima del prodotto midi (in pixel) (Standard: 160)');
 define('PRODUCT_IMAGE_INFO_WIDTH_TITLE' , 'larghezza dell\'immagine info-articolo');
 define('PRODUCT_IMAGE_INFO_WIDTH_DESC' , 'Massima larghezza dell\'immagine info-articolo in Pixel');
 define('PRODUCT_IMAGE_INFO_HEIGHT_TITLE' , 'altezza dell\'immagine info-articolo');
@@ -142,6 +152,47 @@ define('PRODUCT_IMAGE_POPUP_WIDTH_TITLE' , 'Larghezza dell\'immagine Popup-artic
 define('PRODUCT_IMAGE_POPUP_WIDTH_DESC' , 'larghezza massima dell\'immagine Popup-articolo in Pixel');
 define('PRODUCT_IMAGE_POPUP_HEIGHT_TITLE' , 'altezza dell\'immagine Popup-articolo');
 define('PRODUCT_IMAGE_POPUP_HEIGHT_DESC' , 'Massima altezza dell\'immagine Popup-articolo in Pixel');
+
+define('CATEGORIES_IMAGE_WIDTH_TITLE' , 'Larghezza delle immagini della categoria');
+define('CATEGORIES_IMAGE_WIDTH_DESC' , 'Larghezza massima delle immagini della categoria (in pixel) (Standard: 985).');
+define('CATEGORIES_IMAGE_HEIGHT_TITLE' , 'Altezza delle immagini della categoria');
+define('CATEGORIES_IMAGE_HEIGHT_DESC' , 'Altezza massima delle immagini della categoria (in pixel) (Standard: 370).');
+
+define('CATEGORIES_IMAGE_MOBILE_WIDTH_TITLE' , 'Larghezza delle immagini della categoria Mobile');
+define('CATEGORIES_IMAGE_MOBILE_WIDTH_DESC' , 'Larghezza massima delle immagini della categoria mobile (in pixel) (Standard: 600).');
+define('CATEGORIES_IMAGE_MOBILE_HEIGHT_TITLE' , 'Altezza delle immagini della categoria Mobile');
+define('CATEGORIES_IMAGE_MOBILE_HEIGHT_DESC' , 'Altezza massima delle immagini della categoria mobile (in pixel) (Standard: 400).');
+
+define('CATEGORIES_IMAGE_LIST_WIDTH_TITLE' , 'Larghezza dell\'elenco delle immagini della categoria');
+define('CATEGORIES_IMAGE_LIST_WIDTH_DESC' , 'Larghezza massima dell\'elenco delle immagini della categoria (in pixel) (Standard: 225)');
+define('CATEGORIES_IMAGE_LIST_HEIGHT_TITLE' , 'Altezza dell\'elenco delle immagini della categoria');
+define('CATEGORIES_IMAGE_LIST_HEIGHT_DESC' , 'Altezza massima dell\'elenco delle immagini della categoria (in pixel) (Standard: 170).');
+define('MANUFACTURER_IMAGE_WIDTH_TITLE' , 'Width of Manufacturer Images');
+define('MANUFACTURER_IMAGE_WIDTH_DESC' , 'Maximum width of manufacturer images (in pixels) (Standard: 100).');
+define('MANUFACTURER_IMAGE_HEIGHT_TITLE' , 'Height of Manufacturer Images');
+define('MANUFACTURER_IMAGE_HEIGHT_DESC' , 'Maximum height of manufacturer images (in pixels) (Standard: 60).');
+
+define('BANNERS_IMAGE_WIDTH_TITLE' , 'Larghezza delle immagini del banner');
+define('BANNERS_IMAGE_WIDTH_DESC' , 'Larghezza massima delle immagini del banner (in pixel) (Standard: 985).');
+define('BANNERS_IMAGE_HEIGHT_TITLE' , 'Altezza delle immagini del banner');
+define('BANNERS_IMAGE_HEIGHT_DESC' , 'Altezza massima delle immagini dei banner (in pixel) (Standard: 370).');
+
+define('BANNERS_IMAGE_MOBILE_WIDTH_TITLE' , 'Larghezza delle immagini del banner mobile');
+define('BANNERS_IMAGE_MOBILE_WIDTH_DESC' , 'Larghezza massima delle immagini del banner mobile (in pixel) (Standard: 600).');
+define('BANNERS_IMAGE_MOBILE_HEIGHT_TITLE' , 'Altezza delle immagini del banner mobile');
+define('BANNERS_IMAGE_MOBILE_HEIGHT_DESC' , 'Altezza massima delle immagini del banner mobile (in pixel) (Standard: 600).');
+
+define('SMALL_IMAGE_WIDTH_TITLE' , 'Larghezza dell\'immagine piccola');
+define('SMALL_IMAGE_WIDTH_DESC' , 'Larghezza delle immagini piccole (in pixel)');
+define('SMALL_IMAGE_HEIGHT_TITLE' , 'Altezza immagine piccola');
+define('SMALL_IMAGE_HEIGHT_DESC' , 'Altezza delle immagini piccole (in pixel)');
+
+define('SUBCATEGORY_IMAGE_WIDTH_TITLE' , 'Sottocategoria Larghezza dell\'immagine');
+define('SUBCATEGORY_IMAGE_WIDTH_DESC' , 'Larghezza delle immagini delle sottocategorie (in pixel)');
+define('SUBCATEGORY_IMAGE_HEIGHT_TITLE' , 'Sottocategoria Altezza immagine');
+define('SUBCATEGORY_IMAGE_HEIGHT_DESC' , 'Altezza delle immagini delle sottocategorie (in pixel)');
+
+
 define('SMALL_IMAGE_WIDTH_TITLE' , 'Larghezza dell\'immagine dell\'articolo');
 define('SMALL_IMAGE_WIDTH_DESC' , 'Massima larghezza dell\'immagine dell\'articolo in Pixel');
 define('SMALL_IMAGE_HEIGHT_TITLE' , 'Altezza dell\'immagine dell\'articolo');
@@ -157,6 +208,9 @@ define('SUBCATEGORY_IMAGE_HEIGHT_DESC' , 'Massima altezza immagine della subcate
 
 define('MO_PICS_TITLE', 'Numero supplementare dell\'immagine del prodotto');
 define('MO_PICS_DESC', 'Numero immagine che devono essere a disposizione per l\'immagine principale del prodotto.');
+define('PRODUCT_IMAGE_MINI_MERGE_TITLE' , 'Prodotto Mini Immagini:Unire<br /><img src="images/config_merge.gif">');
+define('PRODUCT_IMAGE_MINI_MERGE_DESC' , 'Prodotto Immagini Mini:Merge<br /><br />Valori di default: (overlay.gif,10,-50,60,FF0000)<br /><br />overlay merge image<br />Usage:<br />(merge image,x start [neg = da destra],y start [neg = dalla base],opacity, colore trasparente su merge image)');
+
 //This is for the Images showing your products for preview. All the small stuff.
 define('PRODUCT_IMAGE_THUMBNAIL_BEVEL_TITLE', 'Thumbnail-articolo:Bevel<br /><img src="images/config_bevel.gif">');
 define('PRODUCT_IMAGE_THUMBNAIL_BEVEL_DESC' , 'Thumbnail-articolo:Bevel<br /><br />Default valore: (8,FFCCCC,330000)<br /><br />shaded bevelled edges<br />Impiego:<br />(edge width,hex light colour,hex dark colour)');
@@ -174,6 +228,9 @@ define('PRODUCT_IMAGE_THUMBNAIL_DROP_SHADDOW_TITLE' , 'Thumbnail-articolo:Drop-S
 define('PRODUCT_IMAGE_THUMBNAIL_DROP_SHADDOW_DESC' , 'Thumbnail-articolo:Drop-Shadow<br /><br />Default Valore: (3,333333,FFFFFF)<br /><br />more like a dodgy motion blur [semi buggy]<br />Impiego:<br />(shadow width,hex shadow colour,hex background colour)');
 define('PRODUCT_IMAGE_THUMBNAIL_MOTION_BLUR_TITLE' , 'Thumbnail-articolo:Motion-Blur<br /><img src="images/config_motion.gif">');
 define('PRODUCT_IMAGE_THUMBNAIL_MOTION_BLUR_DESC' , 'Thumbnail-articolo:Motion-Blur<br /><br />Default Valore: (4,FFFFFF)<br /><br />fading parallel lines<br />Impiego:<br />(int number of lines,hex background colour)');
+define('PRODUCT_IMAGE_MIDI_MERGE_TITLE' , 'Prodotto immagini midi: unire');
+define('PRODUCT_IMAGE_MIDI_MERGE_DESC' , 'Prodotto Immagini Midi:Merge<br /><br />Valori di default: (overlay.gif,10,-50,60,FF0000)<br /><br />overlay merge image<br />Usage:<br />(merge image,x start [neg = da destra],y start [neg = dalla base],opacity, colore trasparente su merge image)');
+
 //And this is for the Images showing your products in single-view
 define('PRODUCT_IMAGE_INFO_BEVEL_TITLE' , 'Immagine info-articolo:Bevel');
 define('PRODUCT_IMAGE_INFO_BEVEL_DESC' , 'Immagine info-articolo:Bevel<br /><br />Default Valore: (8,FFCCCC,330000)<br /><br />shaded bevelled edges<br />Impiego:<br />(edge width, hex light colour, hex dark colour)');
@@ -242,6 +299,18 @@ define('SHIPPING_INFOS_TITLE' , 'Costi di spedizione ID');
 define('SHIPPING_INFOS_DESC' , 'Gruppo lingua ID dei costi di spedizione (Default 1) per il collegamento.');
 define('SHIPPING_DEFAULT_TAX_CLASS_METHOD_TITLE' , 'Metodo di calcolo della classe fiscale predefinita');
 define('SHIPPING_DEFAULT_TAX_CLASS_METHOD_DESC' , 'nessuno: non mostrare tassa di spedizione<br />auto proporzionale: mostra tassa di spedizione proporzionale all\'ordine<br />auto max: mostra tassa di spedizione, usa l\'aliquota del pi&ugrave; grande gruppo di fatturato');
+
+define('SHOW_SHIPPING_MODULE_TITLE_TITLE' , 'Titolo delle spese di spedizione');
+define('SHOW_SHIPPING_MODULE_TITLE_DESC' , 'Scegli il titolo delle spese di spedizione nel totale dell\'ordine');
+define('CUSTOM_SHIPPING_TITLE_TITLE' , 'Spese di spedizione del titolo individuale');
+define('CUSTOM_SHIPPING_TITLE_DESC' , 'Inserire un nome. Questa impostazione si applica solo se le spese di spedizione del titolo sono impostate su "Custom"..');
+define('CFG_TXT_SHIPPING_DEFAULT', 'Standard');
+define('CFG_TXT_SHIPPING_TITLE', 'Titolo');
+define('CFG_TXT_SHIPPING_CUSTOM', 'Personalizzato');
+
+define('CAPITALIZE_ADDRESS_FORMAT_TITLE' , 'Indirizzo in lettere maiuscole');
+define('CAPITALIZE_ADDRESS_FORMAT_DESC' , 'Mostra i nomi dei paesi e delle citt&agrave; in lettere maiuscole');
+
 define('PRODUCT_LIST_FILTER_TITLE' , 'indicazioni del filtro di selezione nella lista articoli?');
 define('PRODUCT_LIST_FILTER_DESC' , ' indicazioni del filtro di selezione per il gruppo merci/produttore etc Filtro (0=inattivo; 1=attivo)');
 define('STOCK_CHECK_TITLE' , 'controllo delle giacenze della merce');
@@ -250,6 +319,11 @@ define('ATTRIBUTE_STOCK_CHECK_TITLE' , 'controllo della giacenza degli elementi 
 define('ATTRIBUTE_STOCK_CHECK_DESC' , 'Controllare se ci sono abbastanza elementi della merce');
 define('STOCK_LIMITED_TITLE' , 'quantit&agrave; merce da togliere');
 define('STOCK_LIMITED_DESC' , 'Prelevare la quantit&agrave; merce dalla giacenza merce, quando la merce &egrave; stata ordinata');
+
+define('STOCK_LIMITED_DOWNLOADS_TITLE' , 'Sottrarre le scorte per i download');
+define('STOCK_LIMITED_DOWNLOADS_DESC' , 'L\'importo delle merci deve essere detratto anche per gli articoli da scaricare?');
+define('STOCK_ALLOW_CHECKOUT_TITLE' , 'Permettere il checkout');
+
 define('STOCK_ALLOW_CHECKOUT_TITLE' , 'Non permettere l\'acquisto della merce in magazzino');
 define('STOCK_ALLOW_CHECKOUT_DESC' , 'desidera rendere possibile l\'acquisto della merce, anche quando alcune merci non sono disponibili?');
 define('STOCK_MARK_PRODUCT_OUT_OF_STOCK_TITLE' , 'contrassegnare gli articoli esauriti');
@@ -292,6 +366,10 @@ define('SEND_EMAILS_TITLE' , 'Invio di eMails');
 define('SEND_EMAILS_DESC' , ' invia eMails al cliente (per ordinazione etc)');
 define('SENDMAIL_PATH_TITLE' , 'percorso per invio email');
 define('SENDMAIL_PATH_DESC' , 'se utilizza invioe-mail, indichi al programma il sentiero per inviare l\'email(modo normale: /usr/bin/sendmail):');
+
+define('USE_SENDMAIL_OPTIONS_TITLE', 'Opzioni di Sendmail');
+define('USE_SENDMAIL_OPTIONS_DESC', 'Se mail() usa un MTA completamente compatibile con sendmail');
+
 define('SMTP_MAIN_SERVER_TITLE' , 'indirizzo del server SMTP');
 define('SMTP_MAIN_SERVER_DESC' , 'Indichi l\'indirizzo del suo principale server SMTP.');
 define('SMTP_BACKUP_SERVER_TITLE' , 'Indirizzo del server Backup SMTP');
@@ -437,8 +515,8 @@ define('ACTIVATE_GIFT_SYSTEM_DESC','Attivare il sistema dei voucher? <br/><b>Not
 define('SECURITY_CODE_LENGTH_TITLE', 'Lunghezza del codice del buono regalo');
 define('SECURITY_CODE_LENGTH_DESC', 'Inserire qui la lunghezza del codice del buono regalo (max. 16 caratteri)');
 
-define('NEW_SIGNUP_GIFT_VOUCHER_AMOUNT_TITLE', 'Welcome Gift Voucher Amount');
-define('NEW_SIGNUP_GIFT_VOUCHER_AMOUNT_DESC', 'Welcome Gift Voucher Amount: If you do not wish to send a Gift Voucher in your create account E-Mail, put 0 for no amount, else place the amount here, i.e. 10.00 or 50.00, no currency signs');
+define('NEW_SIGNUP_GIFT_VOUCHER_AMOUNT_TITLE', 'Buono regalo di benvenuto Importo');
+define('NEW_SIGNUP_GIFT_VOUCHER_AMOUNT_DESC', 'Importo del buono regalo di benvenuto: Se non desideri inviare un Buono Regalo nella tua e-mail di creazione dell\'account, metti 0 per nessun importo, altrimenti metti l\'importo qui, cio&egrave; 10,00 o 50,00, nessun segno di valuta');
 define('NEW_SIGNUP_DISCOUNT_COUPON_TITLE', 'Buono regalo di benvenuto Importo');
 define('NEW_SIGNUP_DISCOUNT_COUPON_DESC', 'Buono regalo di benvenuto Importo: se non vuoi inviare un Buono Sconto nel tuo account Crea un\'e-mail, lascia questo campo vuoto, altrimenti inserisci qui il codice del coupon che vuoi usare.<br /><b>Attenzione:</b> Il codice del coupon deve essere creato nel <a href="'.xtc_href_link(FILENAME_COUPON_ADMIN).'"><b>Coupon Admin</b></a> prima di.');
 
@@ -567,7 +645,7 @@ define('PAYPAL_EXPRESS_ADDRESS_CHANGE_DESC','Permette di modificare i dati di in
 define('PAYPAL_EXPRESS_ADDRESS_OVERRIDE_TITLE','Sovrascrivere l\'indirizzo e-mail');
 define('PAYPAL_EXPRESS_ADDRESS_OVERRIDE_DESC','Permette di modificare i dati di indirizzo trasferiti da PayPal (conto esistente)');
 define('PAYPAL_INVOICE_TITLE','Prefisso del negozio per la fattura PayPal n.');
-define('PAYPAL_INVOICE_DESC','Stringa di lettere arbitrarie (prefisso), che viene posta davanti ad ogni numero d\'ordine e viene utilizzata per generare il numero di fattura PayPal.<br />Questo permette l\'operazione di più negozi con un solo conto PayPal. I conflitti relativi ai numeri d\'ordine vengono evitati. Ogni ordine ha i propri numeri di fattura all\'interno del conto PayPal.');
+define('PAYPAL_INVOICE_DESC','Stringa di lettere arbitrarie (prefisso), che viene posta davanti ad ogni numero d\'ordine e viene utilizzata per generare il numero di fattura PayPal.<br />Questo permette l\'operazione di pi&ugrave; negozi con un solo conto PayPal. I conflitti relativi ai numeri d\'ordine vengono evitati. Ogni ordine ha i propri numeri di fattura all\'interno del conto PayPal.');
 
 define('PAYPAL_BRANDNAME_TITLE','Nome del negozio PayPal');
 define('PAYPAL_BRANDNAME_DESC','Inserisci il nome che deve essere visualizzato su PayPal.');
@@ -778,6 +856,8 @@ define('SEND_MAIL_ACCOUNT_CREATED_TITLE', 'E-Mail al momento della creazione del
 define('SEND_MAIL_ACCOUNT_CREATED_DESC', 'Invia un\'e-mail al cliente al momento della creazione del conto?');
 define('STATUS_EMAIL_SENT_COPY_TO_ADMIN_TITLE', 'E-mail al cambio di stato');
 define('STATUS_EMAIL_SENT_COPY_TO_ADMIN_DESC', 'Inviare un\'e-mail all\'amministratore al cambio di stato dell\'ordine?');
+define('ORDER_EMAIL_SEND_COPY_TO_ADMIN_TITLE', 'Conferma dell\'ordine via e-mail all\'amministratore');
+define('ORDER_EMAIL_SEND_COPY_TO_ADMIN_DESC', 'Inviare una copia dell\'e-mail di conferma dell\'ordine all\'amministratore');
 define('STOCK_CHECK_SPECIALS_TITLE', 'Controlla le offerte speciali');
 define('STOCK_CHECK_SPECIALS_DESC', 'Controlla se sono disponibili scorte speciali sufficienti<br/><br/><b>ATTENZIONE:</b> Se le scorte speciali non sono sufficienti, l\'ordine pu&ograve; essere evaso solo dopo una riduzione della quantit&agrave;.');
 define('DOWNLOAD_SHOW_LANG_DROPDOWN_TITLE', 'Paesi a tendina nel carrello');

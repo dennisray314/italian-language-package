@@ -44,4 +44,11 @@ define('TEXT_IMPORT_UTF', 'Ripristinare la banca dati UTF-8');
 define('TEXT_REMOVE_COLLATE', "<b>Senza codifica 'COLLATE' e 'DEFAULT CHARSET'.</b><br> - Le dichiarazioni di codifica non sono inserite. Utile quando si migra verso un'altra codifica di database.");
 //TEXT_REMOVE_ENGINE
 define('TEXT_REMOVE_ENGINE', "<b>Senza motori di stoccaggio 'ENGINE'.</b><br> - Le dichiarazioni del motore di archiviazione (MyISAM,InnoDB) non sono inserite.");
+define('TEXT_IMPORT_UTF8_NOTICE', '<b>Attenzione:</b> il database viene convertito in UTF-8.');
+define('TEXT_INFO_CHARSET', 'Charset:');
+
+define('TEXT_TABLES_BACKUP_TYPE', '<b>Backup</b><br> - Quali tabelle devono essere salvate?');
+define('TEXT_BACKUP_ALL', 'Tutti i tavoli');
+define('TEXT_BACKUP_CUSTOM', 'Tabelle selezionate');
+define('TEXT_TABLES_TO_BACKUP', '<b>Le seguenti tabelle dovrebbero essere salvate:</b>');
 ?>

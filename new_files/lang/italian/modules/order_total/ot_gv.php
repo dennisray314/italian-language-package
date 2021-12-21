@@ -22,4 +22,6 @@
   define('MODULE_ORDER_TOTAL_GV_TAX_CLASS_DESC', 'Utilizza il seguente tasso IVA, se utilizza il buono come accredito.');
   define('MODULE_ORDER_TOTAL_GV_CREDIT_TAX_TITLE', 'Il credito contiene IVA.');
   define('MODULE_ORDER_TOTAL_GV_CREDIT_TAX_DESC', 'Calcola IVA del valore del buono');
+  define('MODULE_ORDER_TOTAL_GV_UNALLOWED_PAYMENT_TITLE', 'Modulo di pagamento non consentitos');
+  define('MODULE_ORDER_TOTAL_GV_UNALLOWED_PAYMENT_DESC', '<strong>Moduli di pagamento vietati</strong> per prodotti regalo.');
 ?>

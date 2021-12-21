@@ -89,6 +89,7 @@ define('MODULE_PAYMENT_'.$sofort_code.'_ERROR_PAYMENT', "Denaro NON ancora ricev
 define('MODULE_PAYMENT_'.$sofort_code.'_ERROR_UNEXPECTED_STATUS', "Errore (SU204): Stato inatteso\nTransaction-ID: %s");
 define('MODULE_PAYMENT_'.$sofort_code.'_SUCCESS_TRANSACTION', "Pagamento avvenuto con successo\nTransaction-ID: %s");
 define('MODULE_PAYMENT_'.$sofort_code.'_SUCCESS_PAYMENT', "Denaro ricevuto\nTransaction-ID: %s");
+define('MODULE_PAYMENT_'.$sofort_code.'_SUCCESS_REFUNDED', "Zahlung erstattet\nTransaction-ID: %s");
 // order status
 $SOFORT_INST_ORDER_STATUS_TMP_NAME = 'Temp';
 $SOFORT_INST_ORDER_STATUS_UNC_NAME = 'In attesa di';

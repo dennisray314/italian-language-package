@@ -67,6 +67,7 @@ define('COUPON_CUSTOMERS_HELP', 'Scegliere i gruppi di clienti validi per questo
 define('COUPON_ID', 'cID');
 define('BUTTON_DELETE_NO_CONFIRM', 'Cancellare senza conferma');
 define('TEXT_NONE', 'nessuna restrizione');
+define('TEXT_NO_RESTRICTION', 'nessuna restrizione');
 define('TEXT_COUPON_DELETE', 'Cancellare');
 define('TEXT_COUPON_STATUS', 'Stato');
 define('TEXT_COUPON_DETAILS', 'Dettagli del coupon');

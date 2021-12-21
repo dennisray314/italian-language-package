@@ -21,9 +21,7 @@
  * 
  */
  
-define('TITLE', STORE_NAME);
-define('HEADER_TITLE_TOP', 'Home');    
-define('HEADER_TITLE_CATALOG', 'Catalogo');
+
 define('HTML_PARAMS','dir="ltr" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml');
 
 @setlocale(LC_TIME, 'it_IT.ISO8859-1', 'it_IT', 'it-IT', 'it');
@@ -45,10 +43,15 @@ function xtc_date_raw($date, $reverse = false) {
 require_once(DIR_FS_INC.'auto_include.inc.php');
 foreach(auto_include(DIR_WS_LANGUAGES.'italian/extra/','php') as $file) require ($file);
 
+define('TITLE', STORE_NAME);
+define('HEADER_TITLE_TOP', 'Home');    
+define('HEADER_TITLE_CATALOG', 'Catalogo');
+
 // if USE_DEFAULT_LANGUAGE_CURRENCY is true, use the following currency, instead of the applications default currency (used when changing language)
 define('LANGUAGE_CURRENCY', 'EURO');
 define('MALE', 'Signor');
 define('FEMALE', 'Signora');
+define('DIVERSE', 'Diverso');
 
 /*
  * 
@@ -116,7 +119,7 @@ define('ENTRY_EMAIL_ADDRESS_CHECK_ERROR', 'L\'indirizzo e-mail inserito &egrave;
 define('ENTRY_EMAIL_ERROR_NOT_MATCHING', 'Gli indirizzi e-mail inseriti non corrispondono.'); // 
 define('ENTRY_EMAIL_ADDRESS_ERROR_EXISTS', 'l\'indirizzo e-mail non esiste - lo controlli.');
 define('ENTRY_EMAIL_ADDRESS_TEXT', '*');
-define('ENTRY_STREET_ADDRESS_ERROR', 'Via/N° deve essere di minimo' . ENTRY_STREET_ADDRESS_MIN_LENGTH . ' caratteri.');
+define('ENTRY_STREET_ADDRESS_ERROR', 'Via/N&deg; deve essere di minimo' . ENTRY_STREET_ADDRESS_MIN_LENGTH . ' caratteri.');
 define('ENTRY_STREET_ADDRESS_TEXT', '*');
 define('ENTRY_SUBURB_TEXT', '');
 define('ENTRY_POST_CODE_ERROR', 'Il suo CAP deve essere di minimo ' . ENTRY_POSTCODE_MIN_LENGTH . ' caratteri.');
@@ -300,6 +303,7 @@ define('JS_PRICE_TO_MUST_BE_NUM', '* \"Prezzo fino a\" deve essere un numero\n\n
 define('JS_PRICE_TO_LESS_THAN_PRICE_FROM', '* Prezzo fino a deve essere uguale o superiore a prezzo da.\n');
 define('JS_INVALID_KEYWORDS', '* termine ricerca non ammesso\n');
 define('TEXT_LOGIN_ERROR', '<font color="#ff0000"><b>ERRORE:</b></font> nessuna corrispondenza tra\'indirizzo e-mail\' e/o la \'Password\'.');
+define('TEXT_RELOGIN_NEEDED', 'Per favore, accedi di nuovo.');
 define('TEXT_NO_EMAIL_ADDRESS_FOUND', '<font color="#ff0000"><b>ATTENZIONE:</b></font> indirizzo e-mail non registrato. Riprovi.');
 define('TEXT_PASSWORD_SENT', 'Una nuova Password le &egrave; stata inviata tramite e-mail.');
 define('TEXT_PRODUCT_NOT_FOUND', 'Articolo non trovato!');
@@ -430,6 +434,7 @@ define('TEXT_LINK_TITLE_INFORMATION', 'Informazioni');
 define('TEXT_CLOSE_WINDOW', 'chiudere finestra [x]');
 define('TEXT_COUPON_HELP_HEADER', 'Il suo buono &egrave; stato registrato con successo.');
 define('TEXT_COUPON_HELP_NAME', '<br /><br />Contrassegno buono: %s');
+define('TEXT_COUPON_HELP_SPECIALS', '<br /><br />Il tuo coupon non pu&ograve; essere applicato alle offerte speciali.');
 define('TEXT_COUPON_HELP_FIXED', '<br /><br />Il buono &egrave; di %s ');
 define('TEXT_COUPON_HELP_MINORDER', '<br /><br />Il valore minimo da ordinare &egrave; di %s ');
 define('TEXT_COUPON_HELP_FREESHIP', '<br /><br />Buono per spedizione gratuita');
@@ -458,6 +463,7 @@ define('TAX_INFO_INCL','incl. %s UST');
 define('TAX_INFO_EXCL','escl. %s UST');
 define('TAX_INFO_ADD','pi&ugrave; %s UST');
 define('SHIPPING_EXCL','escl.');
+define('SHIPPING_INCL','incl.');
 define('SHIPPING_COSTS','Costi di spedizione');
 
 // changes 3.0.4 SP2
@@ -520,6 +526,7 @@ define('ERROR_REVIEW_AUTHOR', 'Inserisci il tuo nome.');
 define('GV_NO_PAYMENT_INFO', '<div class="infomessage">Potete pagare l\'ordine completamente con il vostro credito. Se non volete riscattare il vostro saldo, cancellate la selezione del credito e selezionate un metodo di pagamento!</div>');
 define('GV_ADD_PAYMENT_INFO', '<div class="errormessage">Il vostro credito non &egrave; sufficiente o non pu&ograve; essere utilizzato per tutte le posizioni contabili per pagare completamente l\'ordine. Si prega di selezionare un metodo di pagamento in aggiunta!</div>');
 define('_SHIPPING_FREE','Spedizione gratuita');
+define('TEXT_INFO_FREE_SHIPPING_COUPON', 'Le spese di spedizione sono coperte dal tuo coupon.');
 define('TEXT_CONTENT_NOT_FOUND', 'Pagina non trovata!');
 define('TEXT_SITE_NOT_FOUND', 'Pagina non trovata!');
 
@@ -580,7 +587,7 @@ define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_10', 'Non sono indicati i titolari del
 define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_128', 'Errore interno durante il controllo dei dati bancari.');
 
 // Fehlermeldungen alle IBAN-Nummern 
-define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1000', 'In IBAN incluso codice paese (1° e 2° posto) sconosciuto.');
+define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1000', 'In IBAN incluso codice paese (1&deg; e 2&deg; posto) sconosciuto.');
 define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1010', 'Lunghezza IBAN errata: Troppi punti inseriti.');
 define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1020', 'Lunghezza IBAN errata: Troppi pochi punti inseriti.');
 define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1030', 'L\'IBAN non &egrave; equivalente a quello stabilito per il formato del paese.');
@@ -589,7 +596,7 @@ define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1050', 'Il BIC ha un formato non valid
 define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1060', 'Lunghezza BIC errata: Troppi caratteri inseriti. Sono necessari 8 o 11 caratteri.');
 define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1070', 'BIC-length wrong: Zu wenige Zeichen angeben. 8 or 11 characters are required.');
 define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1080', 'BIC-lunghezza sbagliata: Zu wenige Zeichen angeben. Sono necessari 8 o 11 caratteri.');
-define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1200', 'Gli IBAN del paese specificato (1° e 2° posto dell\'IBAN) non sono accettati.');
+define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_1200', 'Gli IBAN del paese specificato (1&deg; e 2&deg; posto dell\'IBAN) non sono accettati.');
 
 // Fehlermeldungen für deutsche Kontonummern 
 define('BANKACCOUNT_CHECK_TEXT_BANK_ERROR_2001', 'Nell\'IBAN incluso il numero di conto (punti da 13 a 22) e/o il numero di instradamento (punti da 5 a 12) non sono validi o non corrispondono tra loro.');

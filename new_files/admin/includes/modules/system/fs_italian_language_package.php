@@ -52,6 +52,7 @@ class fs_italian_language_package extends StdModule
     
   function install() 
   {
+    global $messageStack;
     $sort_order_query = xtc_db_query("SELECT sort_order FROM languages ORDER BY sort_order DESC LIMIT 1");
     $sort_order_result = xtc_db_fetch_array($sort_order_query);
     $italianLanguageData = [
@@ -62,8 +63,10 @@ class fs_italian_language_package extends StdModule
       'language_charset' => 'utf8',
       'directory' => 'italian'
     ];
-    $this->stdLanguageModule->init($italianLanguageData, 0);
+    $stdLanguageModule = new StdLanguageModule;
+    $stdLanguageModule->init($italianLanguageData, 0);
     parent::install();
+    $messageStack->add_session(TEXT_LANGUAGE_INSTALLED_SUCCESSFULLY, 'success');
   }
 
   function remove() 

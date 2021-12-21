@@ -1,5 +1,5 @@
 <?php
- define('HEADING_TITLE','Responsabile dei contenuti');
+ defined('HEADING_TITLE') OR define('HEADING_TITLE','Responsabile dei contenuti');
  define('HEADING_CONTENT','Pagine Content');
  define('HEADING_PRODUCTS_CONTENT','Articoli Content');
   define('HEADING_CONTENT_MANAGER_CONTENT','Contenuto del sito');
@@ -23,10 +23,10 @@
  define('TABLE_HEADING_CONTENT_HITS','Hits');
  define('TABLE_HEADING_CONTENT_GROUP','Gruppo');
  define('TABLE_HEADING_CONTENT_SORT','ordine');
- define('TEXT_YES','Si');
- define('TEXT_NO','No');
+ defined('TEXT_YES') OR define('TEXT_YES','Si');
+ defined('TEXT_NO') OR define('TEXT_NO', 'No');
  define('TABLE_HEADING_CONTENT_ACTION','Azione');
- define('TEXT_DELETE','Cancella');
+ defined('TEXT_DELETE') OR define('TEXT_DELETE','Cancella');
  define('TEXT_EDIT','modifica');
  define('TEXT_PREVIEW','Presentazione');
  define('CONFIRM_DELETE','&eacute; sicuro di voler cancellare il Content?');
@@ -44,7 +44,7 @@
  define('TEXT_UPLOAD_FILE_LOCAL','(dal suo sistema locale)');
  define('TEXT_CHOOSE_FILE','Seleziona file:');
  define('TEXT_CHOOSE_FILE_DESC','Dalla lista pu&ograve; scegliere un file disponibile.');
- define('TEXT_NO_FILE','annulla selezione');
+ defined('TEXT_NO_FILE') OR define('TEXT_NO_FILE','annulla selezione');
  define('TEXT_CHOOSE_FILE_SERVER','(In caso ha registrato un file sul suo server via FTP <i>(media/content)</i>, qui pu&ograve; selezionare il file.');
  define('TEXT_CURRENT_FILE','File attuale:');
  define('TEXT_FILE_DESCRIPTION','<b>Info:</b><br />Ha la possibili&agrave; di utilizzare un file<b>.html</b> o <b>.htm</b> come Content.<br /> in caso ha scelto o caricato un file, il testo nel campo testo sar&agrave; ignorato.<br /><br />');
@@ -56,7 +56,7 @@
  define('TEXT_PARENT_DESCRIPTION','Assegni questo documento');
  define('TEXT_PRODUCT','Articolo:');
  define('TEXT_LINK','Link:');
- define('TEXT_SORT_ORDER','Categoria:');
+ defined('TEXT_SORT_ORDER') OR define('TEXT_SORT_ORDER','Categoria:');
  define('TEXT_GROUP','Gruppo lingue:');
  define('TEXT_GROUP_DESC','Colleghi con questa ID lo stesso tema alle altre lingue.');
   define('TEXT_CONTENT_DESCRIPTION','Con questo Content MAnager ha la possibilit&agrave; di aggiungere per ogni tipo di dato un articolo.<br />Zb. descrizone articolo, Manuali, Fogli tecnici, prove percettibili, ecc...<br />Questi Elementi saranno mostrati nelle visione dettagliata dell\'articolo.<br /><br />');
@@ -76,6 +76,6 @@
  define('TEXT_STATUS_ACTIVE', 'Stato attivo:'); 	 
  define('TEXT_STATUS_ACTIVE_DESCRIPTION', 'Attivare il contenuto?');
  define('TEXT_CONTENT_DOUBLE_GROUP_INDEX', 'Duplicare l\'indice dei gruppi di contenuto! Si prega di salvare di nuovo. Il problema viene cos&igrave; automaticamente corretto!');
- define('TEXT_CHARACTERS','Segnaletica');
+ defined('TEXT_CHARACTERS') OR define('TEXT_CHARACTERS','Segnaletica');
  define('TEXT_KEEP_FILENAME', 'Conservare il nome del file:');
  ?>

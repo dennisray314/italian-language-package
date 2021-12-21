@@ -29,4 +29,20 @@ define('TEXT_INFO_EDIT_VALUE_INTRO', 'Si prega di apportare le modifiche necessa
 define('TEXT_INFO_HEADING_DELETE_VALUE', 'Cancellare il valore');
 define('TEXT_INFO_DELETE_VALUE_INTRO', 'Sei sicuro di voler cancellare questo valore?');
 define('TEXT_DISPLAY_NUMBER_OF_VALUES', 'Visualizzazione da <b>%d</b> a <b>%d</b> (di <b>%d</b> valori)');
+  define('TITLE_EDIT','Modifica degli attributi ');
+  define('SORT_ORDER','Ordinamento');
+  define('ATTR_MODEL','Modello di attributo');
+  define('ATTR_STOCK','Stock');
+  define('ATTR_WEIGHT','Valore Peso');
+  define('ATTR_PREFIXWEIGHT','Prefisso del peso');
+  define('ATTR_PRICE','Valore Prezzo');
+  define('ATTR_PREFIXPRICE','Prefisso del prezzo');
+  define('DL_COUNT','Conta:');
+  define('DL_EXPIRE','Scadere:');
+  define('TEXT_OPTION_ID', 'Opzione ID');
+  define('TEXT_OPTION_NAME', 'Nome dell\'opzione');
+  define('TEXT_SORTORDER', 'Ordinamento');
+  define('ATTR_EAN', 'GTIN/EAN');
+  define('ATTR_SAVE_ACTIVE', 'Salvare gli attributi di Unfold');
+  define('ATTR_VPE','Unit&agrave; di imballaggio');
 ?>

@@ -1,12 +1,12 @@
 <?php
-define('MODULE_SHIPPING_DHL_TEXT_TITLE', 'DHL Österreich');
-define('MODULE_SHIPPING_DHL_TEXT_DESCRIPTION', 'DHL WORLDWIDE EXPRESS Österreich');
+define('MODULE_SHIPPING_DHL_TEXT_TITLE', 'DHL &Ouml;sterreich');
+define('MODULE_SHIPPING_DHL_TEXT_DESCRIPTION', 'DHL WORLDWIDE EXPRESS &Ouml;sterreich');
 define('MODULE_SHIPPING_DHL_TEXT_WAY', 'Spedizone in');
 define('MODULE_SHIPPING_DHL_TEXT_UNITS', 'kg');
 define('MODULE_SHIPPING_DHL_INVALID_ZONE', 'Il questo Paese non &egrave; possibile effettuare nessuna spedizione');
 define('MODULE_SHIPPING_DHL_UNDEFINED_RATE', 'le spese di spedizione al momento non possono essere calcolate');
 define('MODULE_SHIPPING_DHL_STATUS_TITLE' , 'DHL WORLDWIDE EXPRESS &Ouuml;sterreich');
-define('MODULE_SHIPPING_DHL_STATUS_DESC' , 'desidera offrire il servizio spedizione tramite DHL WORLDWIDE EXPRESS Österreich?');
+define('MODULE_SHIPPING_DHL_STATUS_DESC' , 'desidera offrire il servizio spedizione tramite DHL WORLDWIDE EXPRESS &Ouml;sterreich?');
 define('MODULE_SHIPPING_DHL_HANDLING_TITLE' , 'Handling Fee');
 define('MODULE_SHIPPING_DHL_HANDLING_DESC' , 'calcola tariffa in Euro per questo tipo di spedizione');
 define('MODULE_SHIPPING_DHL_TAX_CLASS_TITLE' , 'aliquota d\'imposta');
