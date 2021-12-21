@@ -43,9 +43,57 @@ $lang_array = array(
   'TEXT_PAYPAL_CAPTURE_AMOUNT' => 'Importo:',
   'TEXT_PAYPAL_CAPTURE_SUBMIT' => 'Catturare',
   'TEXT_PAYPAL_CAPTURED' => 'Pagamento catturato',
+  // products
+  'TEXT_PAYPAL_PRODUCTS_TYPE' => 'Tipo di prodotti',
+  'TEXT_PAYPAL_CREATE_PRODUCT' => 'Creare un prodotto',
+  // subscriptions
+  'TEXT_PAYPAL_SUBSCRIPTIONS_HEADING' => 'Abbonamenti PayPal',
+  'TEXT_PAYPAL_PLANS' => 'Piano',
+  'TEXT_PAYPAL_NEW_PLAN' => 'Nuovo piano',
+  'TEXT_PAYPAL_PLAN_SAVE' => 'Creare un piano',
+  'TEXT_PAYPAL_PLAN_PATCH' => 'Salva piano',
+  'TEXT_PAYPAL_PLAN_STATUS' => 'Stato',
+  'TEXT_PAYPAL_PLAN_NAME' => 'Descrizione',
+  'TEXT_PAYPAL_PLAN_DAY_NAME_INFO' => 'Il nome viene visualizzato al cliente e non pu&ograve; essere cambiato.',
+  'TEXT_PAYPAL_PLAN_INTERVAL' => 'Pagamento',
+  'TEXT_PAYPAL_PLAN_CYCLE' => 'Durata',
+  'TEXT_PAYPAL_PLAN_CYCLE_NO_LIMIT' => 'fino a nuovo avviso',
+  'TEXT_PAYPAL_PLAN_FIXED_PRICE' => 'Prezzo',
+  'TEXT_PAYPAL_PLAN_SETUP_FEE' => 'Tassa d\'installazione',
+  'TEXT_PAYPAL_PLAN_TAX_CLASS' => 'Classe fiscale',
+  'TEXT_PAYPAL_PLAN_TAX_INCLUDE' => 'Tassa inclusa',
+  
+  'TEXT_PAYPAL_PLAN_DAY' => 'Quotidiano',
+  'TEXT_PAYPAL_PLAN_WEEK' => 'Settimanale',
+  'TEXT_PAYPAL_PLAN_MONTH' => 'Mensile',
+  'TEXT_PAYPAL_PLAN_YEAR' => 'Annualmente',
+  
+  'TEXT_PAYPAL_NO_CHANGE' => 'non pu&ograve; essere cambiato',
+  'TEXT_ACTIVE' => 'attivato',
+  'TEXT_INACTIVE' => 'disattivato',
+
+  'TEXT_NONE' => '--nessuno--',
+  'TEXT_YES' => 's&igrave;',
+  'TEXT_NO' => 'no',
+  
+  'TEXT_PAYPAL_BILLING' => 'Pagamenti',
+  'TEXT_PAYPAL_BILLING_OUTSTANDING' => 'saldo residuo:',
+  'TEXT_PAYPAL_BILLING_CYCLES_COMPLETED' => 'Pagamenti completati:',
+  'TEXT_PAYPAL_BILLING_CYCLES_REMAINING' => 'Pagamenti rimanenti:',
+  'TEXT_PAYPAL_BILLING_CYCLES_TOTAL' => 'Totale dei pagamenti',
+  'TEXT_PAYPAL_BILLING_TIME_NEXT' => 'prossimo pagamento:',
+  'TEXT_PAYPAL_BILLING_TIME_FINAL' => 'pagamento finale:',
+  'TEXT_PAYPAL_BILLING_FAILED' => 'fallito:',
+  'TEXT_PAYPAL_CANCEL' => 'annullare il pagamento',
+  'TEXT_PAYPAL_CANCEL_SUBMIT' => 'Confermare',
   // error
   'TEXT_PAYPAL_ERROR_AMOUNT' => 'Si prega di inserire un importo valido',
   'TEXT_PAYPAL_ERROR_ALREADY_PAID' => 'Abbiamo gi&agrave; ricevuto il vostro pagamento. Grazie mille!',
+  'TEXT_PAYPAL_ERROR_NO_PLAN' => 'Please choose a plan.',
+  'TEXT_PAYPAL_ERROR_MAX_PRODUCTS' => 'This product can only be purchased on its own.',
+  'TEXT_PAYPAL_ERROR_CANCEL' => 'An error occurred while canceling.',
+  'TEXT_PAYPAL_ERROR_SUBSCRIPTION_PRODUCTS' => 'You have a subscription product in your shopping cart which can only be bought alone.',  
+  
   // diverse
   'MODULE_PAYMENT_PAYPAL_TEXT_ORDER' => 'Il tuo ordine a '.STORE_NAME,
   // status

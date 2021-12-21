@@ -1,6 +1,6 @@
 <?php
 define('MODULE_SHIPPING_AP_TEXT_TITLE', 'Poste austriache AG');
-define('MODULE_SHIPPING_AP_TEXT_DESCRIPTION', 'Österreichische Post AG - modulo spedizione mondiale');
+define('MODULE_SHIPPING_AP_TEXT_DESCRIPTION', '&Ouml;sterreichische Post AG - modulo spedizione mondiale');
 define('MODULE_SHIPPING_AP_TEXT_WAY', 'Spedizione a');
 define('MODULE_SHIPPING_AP_TEXT_UNITS', 'kg');
 define('MODULE_SHIPPING_AP_INVALID_ZONE', 'Purtroppo non &egrave; possibile spedire in questo paese');

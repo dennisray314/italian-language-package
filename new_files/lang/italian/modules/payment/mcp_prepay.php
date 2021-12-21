@@ -45,4 +45,5 @@ define('MODULE_PAYMENT_MCP_PREPAY_ALLOWED_DESC','Consentire ordini solo da quest
 define('MODULE_PAYMENT_MCP_PREPAY_COMMENT_INIT','In attesa di pagamento. Scade in %s');
 define('MODULE_PAYMENT_MCP_PREPAY_COMMENT_PAYIN','Pagato in %s %s');
 define('MODULE_PAYMENT_MCP_PREPAY_COMMENT_EXPIRED','Nessun deposito');
+define('MODULE_PAYMENT_MCP_SERVICE_TRANSACTION_CANCELLED','cancellazione:L\'ordine &egrave; stato cancellato.');
 ?>

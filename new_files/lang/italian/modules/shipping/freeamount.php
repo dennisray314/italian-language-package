@@ -18,7 +18,7 @@ define('MODULE_SHIPPING_FREEAMOUNT_AMOUNT_TITLE' , 'importo minimo');
 define('MODULE_SHIPPING_FREEAMOUNT_AMOUNT_DESC' , 'minimo valore ordinato, con il quale la spedizione &egrave; gratuita?');
 define('MODULE_SHIPPING_FREEAMOUNT_SORT_ORDER_TITLE' , 'criterio ordinamento');
 define('MODULE_SHIPPING_FREEAMOUNT_SORT_ORDER_DESC' , 'sequenza di visualizzazione');
-if (defined('MODULE_SHIPPING_FREEAMOUNT_NUMBER_ZONES')) {
+if (defined('MODULE_SHIPPING_DP_NUMBER_ZONES')) {
   for ($module_shipping_freeamount_i = 1; $module_shipping_freeamount_i <= MODULE_SHIPPING_FREEAMOUNT_NUMBER_ZONES; $module_shipping_freeamount_i ++) {
     define('MODULE_SHIPPING_FREEAMOUNT_COUNTRIES_'.$module_shipping_freeamount_i.'_TITLE' , '<hr/>Zona '.$module_shipping_freeamount_i.' Paesi');
     define('MODULE_SHIPPING_FREEAMOUNT_COUNTRIES_'.$module_shipping_freeamount_i.'_DESC' , 'Elenco separato da virgole di due caratteri dei codici ISO dei paesi che fanno parte della zona '.$module_shipping_freeamount_i.' (Inserisci "WORLD" per il resto del mondo.).');

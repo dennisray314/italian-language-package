@@ -150,6 +150,7 @@ define('ML_LABEL_TAX_FREE', 'esente da tasse');
 define('ML_LABEL_UPDATE', 'Aggiornamento (ottenere la versione pi&ugrave; recente del plugin magnalister)');
 define('ML_MESSAGE_BEFORE_UPDATE_TITLE', 'aggiornamento magnalister');
 define('ML_MESSAGE_BEFORE_UPDATE_TEXT', 'Il plugin magnalister si aggiorna ora alla versione pi&ugrave; recente. Questo processo richiede 1-3 minuti.');
+define('ML_MESSAGE_UPDATE_DISABLED_GAMBIOCLOUD', 'La funzione di aggiornamento di magnalister &egrave; disabilitata per Gambio Cloud: magnalister viene regolarmente aggiornato da Gambio. Per qualsiasi domanda, si prega di contattare support@magnalister.com');
 define('ML_MESSAGE_BEFORE_XTMC_UPDATE_TITLE', 'xt:MultiConnect Aggiorna');
 define('ML_MESSAGE_BEFORE_XTMC_UPDATE_TEXT', 'Il plugin xt:MultiConnect si aggiorna ora alla versione pi&ugrave; recente. Questo processo richiede 1-3 minuti.');
 define('ML_LABEL_IMPORT_ORDERS', 'Import orders');
@@ -164,8 +165,8 @@ define('ML_MESSAGE_BEFORE_SYNC_INVENTORY_TEXT', 'Tutti i prezzi disponibili e le
 define('ML_LABEL_SYNC_INVENTORY_LOG', '[Protocol Start] Sincronizzazione dell\'inventario: Negozio > Mercato');
 define('ML_LABEL_SYNC_CONTINUE_MODE', ' in modalit&agrave; Continua');
 define('ML_LABEL_SYNC_ORDERSTATUS', 'Sincronizzare gli ordini');
-define('ML_MESSAGE_BEFORE_SYNC_ORDERSTATUS_TITLE', 'Sincronizzazione dello stato dell\'ordine');
 define('ML_OPTION_DELETED_ARTICLES_ENUM_NOT', 'non esistente in %s');
+define('ML_MESSAGE_BEFORE_SYNC_ORDERSTATUS_TITLE', 'Sincronizzazione dello stato dell\'ordine');
 define('ML_MESSAGE_BEFORE_SYNC_ORDERSTATUS_TEXT', 'Tutti gli stati degli ordini disponibili, vengono ora trasmessi dal webshop alle piazze del mercato. Il processo dura 3-10 minuti.<br /><br />Il processo si svolge anche in background a intervalli di 30-60 minuti.');
 define('ML_LABEL_LISTINGSBASED', 'Elenchi basati su');
 define('ML_LABEL_PARENT', 'Articolo del genitore');
@@ -294,6 +295,7 @@ define('ML_POPUP_NOT_AVAILABLE', 'Questa funzione non &egrave; disponibile.');
 define('ML_TEXT_MAKE_YOUR_CHOISE', 'Selezionate il vostro mercato qui sopra.');
 define('ML_TEXT_PLEASE_WAIT', 'Si prega di attendere');
 define('ML_TEXT_FILLOUT_CONFIG_FORM', 'La limitazione del Safe Mode &egrave; attivata sul vostro sistema. Pertanto non &egrave; possibile eseguire automaticamente gli aggiornamenti. Per aggiornare magnalister manualmente, scaricare la versione corrente da <a href="'. MAGNA_PUBLIC_SERVER .'" title="magnalister website">magnalister website</a> e copiare la directory <i> files/ </i> dall\'archivio decompresso nella directory principale del vostro negozio. In alternativa, contattate l\'amministratore del vostro server e chiedete di disattivare la restrizione del Safe Mode in modo permanente. <br /><br />Se lo desideri, possiamo installare l\'aggiornamento per un piccolo costo di installazione <a href="'.MAGNA_PUBLIC_SERVER.'frontend/installation_pricing.php" title="magnalister Seite">(vedi prezzi</a>).');
+define('ML_TEXT_GENERIC_SAFE_MODE', 'La restrizione della modalit&agrave; provvisoria &egrave; attivata sul vostro sistema. Pertanto non &egrave; possibile eseguire gli aggiornamenti automaticamente. Per aggiornare magnalister manualmente, scarica la versione attuale da <a href="'.MAGNA_PUBLIC_SERVER.'" title="sito web magnalister">sito web magnalister</a> e copia la directory <i>files/</i> dall\'archivio decompresso nella directory principale del tuo negozio. In alternativa, contatta l\'amministratore del tuo server e chiedi di disabilitare la restrizione della modalit&agrave; provvisoria in modo permanente. <br /><br />Se lo desideri, possiamo installare l\'aggiornamento per una piccola tassa di installazione<a href="'.MAGNA_PUBLIC_SERVER.'frontend/installation_pricing.php" title="magnalister Seite">(vedere i prezzi</a>).');
 define('ML_TEXT_NEW_VERSION', '&Egrave; disponibile una nuova versione (%s) di magnalister. Per l\'aggiornamento cliccare #qui#.<br />
 	<b>Importante:<b> Per precauzione si prega di eseguire un backup dei file del negozio e del database prima di procedere.
 	Le singole modifiche al codice sorgente del magnalister andranno perse a causa dell\'aggiornamento.');
@@ -446,6 +448,7 @@ define('ML_GENERIC_CURRENCY_EUR', 'EUR');
 define('ML_GENERIC_LABEL_PRICE', 'Prezzo calcolato <small>(come configurato)</small>');
 define('ML_GENERIC_IMAGES', 'Immagini');
 define('ML_GENERIC_NO_IMAGE', 'Nessuna foto');
+define('ML_GENERIC_TAKE_ALL_IMAGES', 'ML_GENERIC_TAKE_ALL_IMAGES');
 define('ML_GENERIC_PRODUCTDESCRIPTION', 'Descrizione dell\'articolo');
 define('ML_GENERIC_MY_PRODUCTDESCRIPTION', 'Descrizione del mio articolo');
 define('ML_GENERIC_CHECKINDATE', 'Data di caricamento');
@@ -489,6 +492,10 @@ define('ML_GENERIC_INVENTORY_STATUS_PENDING_UPDATE', 'Aggiornamento delle voci i
 define('ML_GENERIC_INVENTORY_STATUS_ACTIVE', 'Attivo');
 define('ML_GENERIC_INVENTORY_STATUS_TRANSFERRED', 'Trasferito');
 define('ML_GENERIC_INVENTORY_STATUS', 'Stato');
+define('ML_GENERIC_STATUS_PRODUCT_IS_CREATED', 'ML_GENERIC_STATUS_PRODUCT_IS_CREATED');
+define('ML_GENERIC_STATUS_PRODUCT_IS_UPDATED', 'ML_GENERIC_STATUS_PRODUCT_IS_UPDATED');
+define('ML_GENERIC_STATUS_OFFER_IS_UPDATED', 'ML_GENERIC_STATUS_OFFER_IS_UPDATED');
+define('ML_GENERIC_STATUS_OFFER_IS_CREATED', 'ML_GENERIC_STATUS_OFFER_IS_CREATED');
 define('ML_GENERIC_FILTER_MP_SYNC_DELETED', 'Sincronizzare le voci cancellate');
 define('ML_GENERIC_FILTER_MP_SYNC_INVENTORY', 'Sincronizzare gli articoli all\'inventario del mercato');
 define('ML_GENERIC_AUTOMATIC_ORDER', 'Questo ordine di mercato &egrave; stato importato automaticamente da magnalister.');
@@ -566,6 +573,35 @@ define('ML_AMAZON_LABEL_APPLY_BROWSENODES', 'Codici di navigazione');
 define('ML_AMAZON_LABEL_APPLY_BULLETPOINTS', 'Bulletpoints');
 define('ML_AMAZON_LABEL_APPLY_KEYWORDS', 'Parole chiave generali');
 define('ML_AMAZON_LABEL_APPLY_ADDITIONAL_DETAILS', 'Dettagli delle aggiunte (consigliato)');
+define('ML_AMAZON_INFO_APPLY_KEYWORDS', '<h3>Ottimizzare il posizionamento dei prodotti con le parole chiave di Amazon</h3>
+<br>
+Le parole chiave generali sono utilizzate per ottimizzare il ranking e per una migliore filtrabilit&agrave; su Amazon. Vengono memorizzate con il prodotto in modo invisibile, quando viene caricato.
+<br><br>
+<h2>Opzioni per l\'invio di parole chiave generali</h2>
+
+1. Utilizzare sempre parole chiave aggiornate dal negozio web (meta keywords): 
+<br><br>
+Qui, le parole chiave sono prese dal campo meta keywords del prodotto corrispondente nel negozio web e presentate ad Amazon.
+<br><br>
+2. Inserire manualmente le parole chiave generali in magnalister 
+<br><br>
+Se non vuoi usare le meta keywords memorizzate nel prodotto del web shop, puoi inserire le tue parole chiave nel campo di testo vuoto fornito da magnalister.
+<br><br>
+<b>Note importanti:</b>
+<ul><li>
+Se inserisci le parole chiave manualmente, separale con uno spazio (non una virgola!). La lunghezza massima di tutte le parole chiave (regola generale: 1 carattere = 1 byte. Eccezione: caratteri speciali come &Auml;, &Ouml;, &Uuml; = 2 byte) non pu&ograve; superare i 250 byte.
+</li><li>
+Se le parole chiave del tuo prodotto del web shop sono separate da virgole, magnalister converte automaticamente queste virgole in spazi quando si carica il prodotto. La limitazione a 250 byte si applica anche qui.
+</li><li>
+Se il numero di byte consentito viene superato, Amazon pu&ograve; restituire un messaggio di errore dopo il caricamento del prodotto, che pu&ograve; essere visualizzato nel registro degli errori di magnalister. Si prega di notare che possono passare fino a 60 minuti prima che i messaggi di errore vengano visualizzati nel registro degli errori di magnalister.
+</li><li>
+Invio di Platinum Keywords: Trasferimento di parole chiave Platinum: Se sei un venditore Amazon Platinum, informa il supporto magnalister. Attiveremo allora la presentazione delle parole chiave Platinum. magnalister utilizza le parole chiave generali e le adotta 1:1. Le parole chiave generali e le parole chiave Platinum sono quindi identiche.
+</li><li>
+Se volete trasferire su Amazon le parole chiave Platinum che differiscono dalle "General Keywords", utilizzate l\'abbinamento degli attributi di magnalister in "Prepara articoli" -> "Crea nuovi prodotti" -> "Attributi opzionali Amazon". Per farlo, seleziona "Platinum keywords 1-5" dall\'elenco degli attributi Amazon disponibili e abbina l\'attributo del negozio web corrispondente.
+</li><li>
+Oltre alle parole chiave generali, ci sono altre parole chiave rilevanti per Amazon (ad esempio le parole chiave dell\'attributo thesaurus, le parole chiave del gruppo target o le parole chiave dell\'argomento), che possono anche essere presentate ad Amazon tramite la corrispondenza degli attributi.
+</li></ul>'
+);
 define('ML_AMAZON_LABEL_APPLY_NOT_PREPARED', 'Non preparati');
 define('ML_AMAZON_LABEL_APPLY_PREPARE_COMPLETE', 'Completare');
 define('ML_AMAZON_LABEL_APPLY_PREPARE_INCOMPLETE', 'Incompleto');
@@ -610,6 +646,7 @@ define('ML_AMAZON_TEXT_APPLY_KEYWORDS', 'Termini di ricerca per risultati di ric
 define('ML_AMAZON_TEXT_APPLY_DATA_INCOMPLETE', 'Alcuni campi obbligatori non sono stati compilati. Si prega di regolare cliccando su "'.
 	ML_AMAZON_BUTTON_PREPARE.'"');
 define('ML_AMAZON_TEXT_APPLY_REQUIERD_EAN', 'Non &egrave; necessario, quando le variazioni vengono salvate con EAN');
+define('ML_AMAZON_FROMWEBSHOP_APPLY_KEYWORDS', 'ML_AMAZON_FROMWEBSHOP_APPLY_KEYWORDS');
 define('ML_AMAZON_ERROR_WRONG_CURRENCY', 'La valuta Amazon scelta nella configurazione (%s) si discosta dall\'impostazione predefinita della valuta nel vostro negozio (%s). Per questo motivo non &egrave; possibile elencare alcun articolo su Amazon. Per risolvere il problema, si prega di scegliere il mercato Amazon appropriato.');
 define('ML_AMAZON_ERROR_APPLY_CANNOT_FETCH_SUBCATS', 'Non pu&ograve; caricare sottocategoria');
 define('ML_AMAZON_ERROR_CURRENCY_NOT_IN_SHOP', 'La moneta del mercato non esiste nel negozio. Si prega di inserire la valuta del mercato nel negozio, per caricare i prodotti su Amazon.');
@@ -780,6 +817,18 @@ define('ML_IDEALO_LABEL_SHIPPING_METHOD', 'ML_IDEALO_LABEL_SHIPPING_METHOD');
 define('ML_IDEALO_INFO_SHIPPING_METHOD', 'ML_IDEALO_INFO_SHIPPING_METHOD');
 define('ML_IDEALO_LABEL_SHIPPING_COUNTRY', 'ML_IDEALO_LABEL_SHIPPING_COUNTRY');
 define('ML_IDEALO_LABEL_SHIPPING_COST', 'ML_IDEALO_LABEL_SHIPPING_COST');
+define('ML_IDEALO_LABEL_DELIVERY_TIME', 'ML_IDEALO_LABEL_DELIVERY_TIME');
+define('ML_IDEALO_LABEL_DELIVERY_TIME_FROM_SHOP', 'ML_IDEALO_LABEL_DELIVERY_TIME_FROM_SHOP');
+define('ML_IDEALO_LABEL_SPEDITION_INFO', 'ML_IDEALO_LABEL_SPEDITION_INFO');
+define('ML_IDEALO_LABEL_DIRECT_CHECKOUT', 'ML_IDEALO_LABEL_DIRECT_CHECKOUT');
+define('ML_IDEALO_LABEL_DIRECT_FULFILLMENT_TYPE', 'ML_IDEALO_LABEL_DIRECT_FULFILLMENT_TYPE');
+define('ML_IDEALO_LABEL_DIRECT_TWO_MAN_HANDLING_FEE', 'ML_IDEALO_LABEL_DIRECT_TWO_MAN_HANDLING_FEE');
+define('ML_IDEALO_LABEL_DIRECT_DISPOSAL_FEE', 'ML_IDEALO_LABEL_DIRECT_DISPOSAL_FEE');
+define('ML_IDEALO_OPTION_DIRECT_FULFILLMENTTYPE_SPEDITION', 'ML_IDEALO_OPTION_DIRECT_FULFILLMENTTYPE_SPEDITION');
+define('ML_IDEALO_OPTION_DIRECT_FULFILLMENTTYPE_PACKETDIENST', 'ML_IDEALO_OPTION_DIRECT_FULFILLMENTTYPE_PACKETDIENST');
+define('ML_IDEALO_OPTION_DIRECT_FULFILLMENTTYPE_DOWNLOAD', 'ML_IDEALO_OPTION_DIRECT_FULFILLMENTTYPE_DOWNLOAD');
+define('ML_IDEALO_LABEL_DELIVERY_TIME_MANUAL', 'ML_IDEALO_LABEL_DELIVERY_TIME_MANUAL');
+define('ML_IDEALO_INFO_DELIVERY_TIME', 'ML_IDEALO_INFO_DELIVERY_TIME');
 define('ML_IDEALO_INFO_SHIPPING_COST', 'ML_IDEALO_INFO_SHIPPING_COST');
 define('ML_IDEALO_LABEL_SHIPPING_CURRENCY', 'ML_IDEALO_LABEL_SHIPPING_CURRENCY');
 define('ML_IDEALO_TEXT_APPLY_PRODUCTS_IMAGES', 'ML_IDEALO_TEXT_APPLY_PRODUCTS_IMAGES');
@@ -814,14 +863,16 @@ define('ML_YAGETO_ERROR_CATEGORIES_NOT_IMPORTED_YET', 'Le categorie Yatego non s
 define('ML_YAGETO_ERROR_ACCESS_DENIED', 'ML_YAGETO_ERROR_ACCESS_DENIED');
 define('ML_YAGETO_TEXT_SPECIAL_FILTER', 'Si prega di prestare attenzione: I filtri Yatego possono influenzare la quantit&agrave; di annunci di successo, proprio come la vostra quota massima Yatego per gli annunci di articoli.');
 define('ML_YATEGO_HINT_HEADLINE_PURGE_CATEGORIES', 'Aggiorna le categorie Yatego');
-define('ML_YATEGO_TEXT_PURGE_CATEGORIES', 'Le categorie Yatego vengono aggiornate il 1° di un mese.<br /><br />
+define('ML_YATEGO_TEXT_PURGE_CATEGORIES', 'Le categorie Yatego vengono aggiornate il 1&deg; di un mese.<br /><br />
 <b>Suggerimento:</b>  Yatego cambia categoria di tanto in tanto. Queste categorie non avranno eguali e dovranno essere nuovamente abbinate. Cliccare "OK" per aggiornare le categorie di Yatego ora.');
 define('ML_YATEGO_TEXT_DELETED_INVALID_CATEGORY_MATCHINGS', 'Yatego ha cambiato (alcune) categorie. Le categorie interessate sono state cancellate. Si prega di abbinare nuovamente le seguenti categorie:');
 define('ML_EBAY_LABEL_LISTINGDURATION_DAYS_1', '1 giorno');
 define('ML_EBAY_LABEL_LISTINGDURATION_DAYS_3', '3 giorni');
 define('ML_EBAY_LABEL_LISTINGDURATION_DAYS_5', '5 giorni');
 define('ML_EBAY_LABEL_LISTINGDURATION_DAYS_7', '7 giorni');
+define('ML_EBAY_LABEL_PRODUCT_MATCHING', 'Corrispondenza del prodotto');
 define('ML_EBAY_LABEL_LISTINGDURATION_DAYS_10', '10 giorni');
+define('ML_EBAY_LABEL_PREPARED_NO_MATCH', 'Dati del proprio prodotto');
 define('ML_EBAY_LABEL_LISTINGDURATION_DAYS_14', '14 giorni');
 define('ML_EBAY_LABEL_LISTINGDURATION_DAYS_28', '28 giorni');
 define('ML_EBAY_LABEL_LISTINGDURATION_DAYS_30', '30 giorni');
@@ -875,6 +926,8 @@ define('ML_EBAY_LABEL_PRODUCT_IN_REVIEW', 'In recensione su eBay');
 define('ML_EBAY_LABEL_PRODUCT_APPLIED', 'prodotto ePID, autoproposto');
 define('ML_EBAY_LABEL_PRODUCT_AUTO_APPLIED', 'prodotto ePID, proposto automaticamente');
 define('ML_EBAY_LABEL_PRODUCT_REJECTED', 'Rifiutato da eBay');
+define('ML_EBAY_VAT', 'ML_EBAY_VAT');
+define('ML_EBAY_VAT_HINT', 'ML_EBAY_VAT_HINT');
 define('ML_EBAY_INVENTORY_STATUS_PENDING_UPLOAD', 'Voce Caricamento in corso<br /><span class="small">elaborazione magnalister</span>');
 define('ML_EBAY_INVENTORY_STATUS_PENDING_UPDATE', 'Aggiornamento delle voci in corso<br /><span class="small">elaborazione magnalister</span>');
 define('ML_EBAY_INVENTORY_STATUS_WAITING_CATALOG', 'Il prodotto &egrave; in Review su eBay');
@@ -884,15 +937,22 @@ define('ML_EBAY_HINT_BUSINESS_POLICIES_SHIPPING', '<span style="color:red">Profi
 define('ML_EBAY_HINT_BUSINESS_POLICIES_RETURN', '<span style="color:red">Profilo della politica di restituzione, come stabilito nelle Politiche Aziendali su eBay</span>');
 define('ML_EBAY_LABEL_NO_INTL_SHIPPING', 'Nessuna spedizione internazionale');
 define('ML_EBAY_LABEL_BUSINESS_POLICIES_PAYMENT', 'Politiche aziendali: Profilo di pagamento');
+define('ML_HOOD_CONDITION_NEW_OTHER', 'Nuovo / Altro (vedi descrizione dell\'articolo)');
 define('ML_EBAY_LABEL_BUSINESS_POLICIES_SHIPPING', 'Politiche aziendali: Profilo di spedizione');
+define('ML_HOOD_CONDITION_NEW_WITH_DEFECTS', 'Nuovo con difetti');
 define('ML_EBAY_NOTE_DISABLED_BC_OF_BUSINESSPOLICIES_PAYMENT', '<b>Nota</b>:<br />Questo campo non &egrave; modificabile, perch&eacute; si utilizzano le politiche commerciali di eBay. Scegliere il profilo di pagamento nel campo di selezione qui sopra.');
+define('ML_HOOD_CONDITION_MANUF_REFURBISHED', 'Rinnovato dal produttore');
 define('ML_EBAY_NOTE_DISABLED_BC_OF_BUSINESSPOLICIES_SHIPPING', '<b>Nota</b>:<br />Questo campo non Questo campo non &egrave; modificabile, perch&eacute; si utilizzano le politiche commerciali di eBay. Scegliere il profilo di spedizione nel campo di selezione qui sopra modificabile, perch&eacute; si utilizzano le politiche commerciali di eBay. Scegliere il profilo di spedizione nel campo di selezione qui sopra.');
+define('ML_HOOD_CONDITION_SELLER_REFURBISHED', 'Rinnovato dal venditore');
 define('ML_EBAY_NOTE_DISABLED_BC_OF_BUSINESSPOLICIES_RETURN', '<b>Nota</b>:<br />Questo campo non &egrave; modificabile, perch&eacute; si utilizzano le politiche commerciali di eBay. Scegliere il profilo delle politiche di restituzione nel campo di selezione qui sopra.');
 define('ML_EBAY_LABEL_USE_SUBTITLE_YES_NO', 'Invia un sottotitolo');
+define('ML_HOOD_CONDITION_USED', 'Usato');
 define('ML_EBAY_LABEL_USE_GALLERY_YES_NO', 'Invia una foto della galleria');
+define('ML_HOOD_CONDITION_GOOD', 'Usato, buono');
 define('ML_EBAY_GAMBIO_VARIATIONPICS_EXPLANATION', 'Gambio supporta le immagini delle variazioni come per la versione 2.1, se si imposta la stima delle variazioni su \'Propriet&agrave; Gambio\' nella \'Configurazione globale\' di magnalister;.<br /><br />');
 define('ML_EBAY_LABEL_ATTRIBUTES_FOR', 'Variazioni per');
 define('ML_LABEL_EBAY_PRIMARY_CATEGORY', 'Categoria principale');
+define('ML_HOOD_CONDITION_FOR_PARTS_OR_NOT_WORKING', 'Come parte di ricambio / rotto');
 define('ML_LABEL_EBAY_SECONDARY_CATEGORY', 'Categoria secondaria');
 define('ML_LABEL_EBAY_STORE_CATEGORY', 'Categoria eBay Store');
 define('ML_EBAY_PRODUCTDETAIL_PREFILLED', 'Questi dati provengono dal database del negozio (individualmente per ogni prodotto). Per modificare i dati, si prega di modificare il prodotto nel vostro negozio.');
@@ -934,6 +994,7 @@ define('ML_EBAY_LABEL_RESET_PREPARE_TITLE', 'Azzera il titolo dell\'articolo');
 define('ML_EBAY_LABEL_RESET_PREPARE_SUBTITLE', 'Reimpostare il sottotitolo della voce');
 define('ML_EBAY_LABEL_RESET_PREPARE_DESCRIPTION', 'Reimpostare la descrizione dell\'articolo');
 define('ML_EBAY_LABEL_RESET_PREPARE_PICTURES', 'Reimpostare la selezione delle immagini');
+define('ML_EBAY_LABEL_RESET_PREPARE_STRIKEPRICES', 'ML_EBAY_LABEL_RESET_PREPARE_STRIKEPRICES');
 define('ML_EBAY_LABEL_RESET_PREPARE_EPID', 'Reimpostare la corrispondenza');
 define('ML_EBAY_LABEL_UNPREPARE', 'Annullare la preparazione completa');
 define('ML_EBAY_LABEL_ONLY_NOT_PREPARED', 'Solo articoli non preparati');
@@ -1102,6 +1163,8 @@ define('ML_TEXT_WARNING_EBAY_IMPORT_ONLY_PAID_ORDERS', 'Attivando questa funzion
 );
 define('ML_TITLE_EBAY_WARNING_GALLERY_PLUS_COST', 'Si prega di notare');
 define('ML_TEXT_WARNING_EBAY_GALLERY_PLUS_COSTS', 'Galleria Plus significa una finestra pop-up con una vista pi&ugrave; grande dell\'articolo, quando il cliente punta con il mouse sull\'articolo all\'interno della lista dei risultati della ricerca. Si prega di notare che la dimensione dell\'immagine deve essere <b>di almeno 800x800 px</b>.<br /><br />L\'utilizzo di <b>Gallery Plus</b> pu&ograve; <span style="color:red">causare costi aggiuntivi</span> in alcune categorie di eBay. Vedi <a href="http://pages.ebay.com/help/sell/gallery-upgrade.html" target="_blank">pagina di aiuto di eBay</a> per i dettagli.<br /><br />RedGecko GmbH non &egrave; responsabile per i costi causati.<br /><br />Conferma con \'Si\' se vuoi procedere, o cancella con \'');
+define('ML_TITLE_EBAY_WARNING_STRIKE_PRICE_REQUIREMENTS', 'Si prega di notare');
+define('ML_TEXT_EBAY_WARNING_STRIKE_PRICE_REQUIREMENTS', 'I prezzi barrati sono disponibili solo per alcune tariffe dei negozi eBay. Controlla le pagine di aiuto di eBay per vedere se il tuo modello di tariffa lo consente.<br /><br />In caso contrario, <span style="color:red;">Gli articoli con prezzi barrati verranno rifiutati</span>, e apparir&agrave; un messaggio di errore.<br /><br />Attiva i prezzi barrati?');
 define('ML_EBAY_LABEL_PROD_INFOS', 'Attivare le informazioni sul prodotto');
 define('ML_EBAY_TEXT_SET_PROD_INFOS', 'Le informazioni precompilate sui prodotti eBay possono essere mostrate solo se viene inviato EAN. Attivare EAN?');
 define('ML_EBAY_TEXT_REQUEST_TOKEN', 'Applicare il gettone eBay');
@@ -1121,6 +1184,7 @@ define('ML_EBAY_ORDER_PAID_PUI', "elaborazione magnalister:\nPagamento ricevuto 
 define('ML_EBAY_PUI_MSG_TO_BUYER', "Pagamento eBay su fattura, messaggio di ebay per il cliente:\n");
 define('ML_LABEL_EBAY_SALES_RECORD_NUMBER', 'Numero record di vendite');
 define('ML_EBAY_PP_TRANSACTION_ID', 'ID transazione PayPal');
+define('ML_EBAY_ORDER_DETAIL_INFORMATION_TO_EBAY_SELLER_HUB', 'ML_EBAY_ORDER_DETAIL_INFORMATION_TO_EBAY_SELLER_HUB');
 define('ML_COUNTRY_AUSTRALIA', 'Australia');
 define('ML_COUNTRY_AUSTRIA', 'Austria');
 define('ML_COUNTRY_BELGIUM_DUTCH', 'Belgio (dutch)');
@@ -1219,6 +1283,7 @@ define('ML_CROWDFOX_ERROR_DESCRIPTION', 'ML_CROWDFOX_ERROR_DESCRIPTION');
 define('ML_CROWDFOX_OBLIGATION_INFO', 'ML_CROWDFOX_OBLIGATION_INFO');
 define('ML_CROWDFOX_BRAND', 'ML_CROWDFOX_BRAND');
 define('ML_CROWDFOX_MPN', 'ML_CROWDFOX_MPN');
+define('ML_HITMEISTER_SUBTITLE', 'ML_HITMEISTER_SUBTITLE');
 define('ML_CROWDFOX_UPLOAD_EXPLANATION', 'ML_CROWDFOX_UPLOAD_EXPLANATION');
 define('ML_ERROR_CROWDFOX_USERNAME', 'ML_ERROR_CROWDFOX_USERNAME');
 define('ML_ERROR_CROWDFOX_COMPANYNAME', 'ML_ERROR_CROWDFOX_COMPANYNAME');
@@ -1244,6 +1309,8 @@ define('ML_HITMEISTER_ERROR_PRODUCTS_WITHDOUBLE_EAN_EXIST', 'ML_HITMEISTER_ERROR
 define('ML_HITMEISTER_UNIT_ATTRIBUTES', 'ML_HITMEISTER_UNIT_ATTRIBUTES');
 define('ML_HITMEISTER_PRODUCT_DETAILS', 'ML_HITMEISTER_PRODUCT_DETAILS');
 define('ML_HITMEISTER_ITEM_NAME_TITLE', 'ML_HITMEISTER_ITEM_NAME_TITLE');
+define('ML_HITMEISTER_KEYWORDS', 'Parole chiave');
+define('ML_HITMEISTER_KEYWORDS_INFO', 'Parole chiave per i motori di ricerca dei prezzi (non mostrate, solo meta dati), testo semplice, fino a 1024 caratteri.');
 define('ML_HITMEISTER_SUBTITLE', 'ML_HITMEISTER_SUBTITLE');
 define('ML_HITMEISTER_DESCRIPTION', 'ML_HITMEISTER_DESCRIPTION');
 define('ML_HITMEISTER_PRICE', 'ML_HITMEISTER_PRICE');
@@ -1348,6 +1415,7 @@ define('ML_CDISCOUNT_LABEL_ORDER_ID', 'Numero d\'ordine (Cdiscount)');
 define('ML_CDISCOUNT_IS_PORN', 'Porno');
 define('ML_CDISCOUNT_AGE_RATING', 'Limitazione di et&agrave;');
 define('ML_CDISCOUNT_CONDITION', 'Condizione');
+define('ML_CDISCOUNT_MAX_4_IMAGES', 'Cdiscount permette il caricamento di un massimo di 4 immagini per articolo.<br/><br/>Inoltre: Per ogni variante caricata, sono permesse anche un massimo di quattro immagini.');
 define('ML_CDISCOUNT_SHIPPINGTYPE_STANDARD', 'Standard di spedizione');
 define('ML_CDISCOUNT_SHIPPINGTYPE_REGISTERED', 'Spedizione registrata');
 define('ML_CDISCOUNT_SHIPPINGTYPE_TRACKED', 'Spedizione tracciata');
@@ -1399,6 +1467,7 @@ define('ML_CDISCOUNT_INVENTORY_STATUS', 'Stato');
 define('ML_CDISCOUNT_INVENTORY_STATUS_ACTIVE', 'Attivo');
 define('ML_CDISCOUNT_INVENTORY_STATUS_PENDING_NEW', 'Cdiscount &egrave; la voce di elaborazione');
 define('ML_CDISCOUNT_INVENTORY_STATUS_PENDING_UPDATE', 'Cdiscount &egrave; la voce di aggiornamento');
+define('ML_RICARDO_ERROR_DESCRITPION', 'ML_RICARDO_ERROR_DESCRITPION');
 define('ML_CDISCOUNT_TEXT_MANUALLY_MATCHING_DESC', 'Cercando di abbinare gli articoli scelti su Cdiscount di EAN e titolo.<br /><br />
 Riceverete un rapporto dettagliato su tutte le partite, dove potrete scegliere quali di esse sono corrette.<br /><br />
 L\'elaborazione pu&ograve; richiedere un certo tempo.');
@@ -1695,6 +1764,10 @@ define('ML_HOOD_TEXT_CHANGE_SITE', 'ML_HOOD_TEXT_CHANGE_SITE');
 define('ML_HOOD_LABEL_PROD_INFOS', 'ML_HOOD_LABEL_PROD_INFOS');
 define('ML_HOOD_TEXT_SET_PROD_INFOS', 'ML_HOOD_TEXT_SET_PROD_INFOS');
 define('ML_HOOD_SUBMIT_ADD_TEXT_ZERO_STOCK_ITEMS_REMOVED', 'ML_HOOD_SUBMIT_ADD_TEXT_ZERO_STOCK_ITEMS_REMOVED');
+define('ML_HOOD_IMPORTONLYPAID_LABEL', 'Importa solo gli ordini contrassegnati da "Paid".');
+define('ML_HOOD_IMPORTONLYPAID_DESC', '<p>Attivando questa funzione, gli ordini da Hood vengono importati solo quando sono contrassegnati su Hood come "Paid". In caso di PayPal, Amazon Pay o Sofort&uuml;berweisung, questo avviene automaticamente. Altrimenti, l\'ordine deve essere impostato su Hood come \"Paid\" di conseguenza.</p><p><strong>Beneficio:</strong>
+L\'ordine importato pu&ograve; essere inviato immediatamente.</p>');
+define('ML_HOOD_IMPORTONLYPAID_RIGHTLABEL', 'Import orders only when completely paid.');
 define('ML_HOOD_ORDER_PAID', 'ML_HOOD_ORDER_PAID');
 define('ML_LABEL_HOOD_SALES_RECORD_NUMBER', 'ML_LABEL_HOOD_SALES_RECORD_NUMBER');
 define('ML_HOOD_LABEL_ADDITEM_COSTS', 'La preparazione dell\'articolo &egrave; stata salvata con successo. La tassa di iscrizione per l\'articolo testato &egrave; di %01,2f Euro.');
@@ -1774,6 +1847,8 @@ define('ML_RICARDO_ERROR_CATEGORY', 'ML_RICARDO_ERROR_CATEGORY');
 define('ML_RICARDO_ERROR_TITLE', 'Si prega di specificare un titolo');
 define('ML_RICARDO_ERROR_DESCRIPTION', 'Si prega di specificare una descrizione dell\'articolo');
 define('ML_RICARDO_ERROR_WARRANTY', 'ML_RICARDO_ERROR_WARRANTY');
+define('ML_RICARDO_ERROR_GTIN', 'ML_RICARDO_ERROR_GTIN');
+define('ML_RICARDO_ERROR_IMAGES', 'ML_RICARDO_ERROR_IMAGES');
 define('ML_RICARDO_ERROR_SHIPPING', 'ML_RICARDO_ERROR_SHIPPING');
 define('ML_RICARDO_ERROR_START_PRICE', 'ML_RICARDO_ERROR_START_PRICE');
 define('ML_RICARDO_ERROR_INCREMENT', 'ML_RICARDO_ERROR_INCREMENT');
@@ -1822,10 +1897,14 @@ define('ML_FYNDIQ_LABEL_BRANDS', 'ML_FYNDIQ_LABEL_BRANDS');
 define('ML_FYNDIQ_LABEL_IDENTIFIERS', 'ML_FYNDIQ_LABEL_IDENTIFIERS');
 define('ML_FYNDIQ_PRODUCT_DETAILS', 'ML_FYNDIQ_PRODUCT_DETAILS');
 define('ML_FYNDIQ_ITEM_NAME_TITLE', 'ML_FYNDIQ_ITEM_NAME_TITLE');
+define('ML_ETSY_WHEN_MADE_1990_1998', '1990-1998');
 define('ML_FYNDIQ_SUBTITLE', 'ML_FYNDIQ_SUBTITLE');
+define('ML_ETSY_WHEN_MADE_BEFORE_1999', 'Before 1999');
 define('ML_FYNDIQ_DESCRIPTION', 'ML_FYNDIQ_DESCRIPTION');
+define('ML_ETSY_WHEN_MADE_1999_1999', '1999-1999');
 define('ML_FYNDIQ_PRICE', 'ML_FYNDIQ_PRICE');
 define('ML_FYNDIQ_LABEL_FYNDIQ_PRICE', 'ML_FYNDIQ_LABEL_FYNDIQ_PRICE');
+define('ML_ETSY_WHEN_MADE_2010_2018', '2010-2018');
 define('ML_FYNDIQ_MARKETPLACE_PREIS', 'ML_FYNDIQ_MARKETPLACE_PREIS');
 define('ML_FYNDIQ_CURRENCY', 'ML_FYNDIQ_CURRENCY');
 define('ML_FYNDIQ_TITLE_MAXLENGTH', 'ML_FYNDIQ_TITLE_MAXLENGTH');
@@ -1845,6 +1924,7 @@ define('ML_ETSY_WHO_MADE_SOMEONE_ELSE', 'Un\'altra azienda o persona');
 define('ML_ETSY_WHEN_MADE', 'Quando l\'hai fatto?');
 define('ML_ETSY_WHEN_MADE_BEFORE_1700', 'Prima del 1700');
 define('ML_ETSY_WHEN_MADE_1700S', '1700s');
+define('ML_GOOGLESHOPPING_CURRENCY', 'ML_GOOGLESHOPPING_CURRENCY');
 define('ML_ETSY_WHEN_MADE_1800S', '1800s');
 define('ML_ETSY_WHEN_MADE_1900S', '1900s');
 define('ML_ETSY_WHEN_MADE_1910S', '1910s');
@@ -1863,6 +1943,7 @@ define('ML_ETSY_WHEN_MADE_1999_1999', '1999-1999');
 define('ML_ETSY_WHEN_MADE_2000_2009', '2000-2009');
 define('ML_ETSY_WHEN_MADE_2010_2019', '2010-2019');
 define('ML_ETSY_WHEN_MADE_2010_2018', '2010-2018');
+define('ML_GOOGLESHOPPING_LABEL_TARGET_COUNTRY', 'ML_GOOGLESHOPPING_LABEL_TARGET_COUNTRY');
 define('ML_ETSY_WHEN_MADE_MADE_TO_ORDER', 'Su ordinazione');
 define('ML_ETSY_ISSUPLY', 'Che cos\'&egrave;?');
 define('ML_ETSY_ISSUPLY_NO', 'Un prodotto finito');
@@ -1876,3 +1957,68 @@ define('ML_ETSY_LISTING_ID', 'Etsy Listing Id');
 define('ML_ETSY_LABEL_TITLE', 'Titolo Etsy');
 define('ML_TITLE_ETSY_WARNING_ZERO_STOCK_COST', 'Sincronizzazione automatica incl. Zero-Stock (consigliato)');
 define('ML_TEXT_ETSY_WARNING_ZERO_STOCK_COST', 'Questa opzione fa s&igrave; che le offerte si riattivino non appena la quantit&agrave; nel vostro negozio &egrave; > 0. Se la quantit&agrave; va a 0, le offerte vengono disattivate. Si prega di notare che la riattivazione delle offerte &egrave; a pagamento su Etsy ');
+
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_BR', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_BR');
+define('ML_GOOGLESHOPPING_PRICE', 'Prezzo');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_CN', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_CN');
+define('ML_GOOGLESHOPPING_DESCRIPTION', 'Descrizione');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_DE', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_DE');
+define('ML_GOOGLESHOPPING_BRAND', 'Marchio');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_EU', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_EU');
+define('ML_GOOGLESHOPPING_LABEL_GOOGLESHOPPING_PRICE', 'Prezzo calcolato <small>(secondo Config)</small>');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_FR', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_FR');
+define('ML_GOOGLESHOPPING_PRODUCT_DETAILS', 'Dettagli del prodotto');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_IT', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_IT');
+define('ML_GOOGLESHOPPING_ERROR_CATEGORY', 'Per favore scegli una categoria');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_JP', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_JP');
+define('ML_GOOGLESHOPPING_ITEM_NAME_TITLE', 'Titolo');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_MEX', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_MEX');
+define('ML_GOOGLESHOPPING_SUBTITLE', 'Sottotitolo');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_UK', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_UK');
+define('ML_GOOGLESHOPPING_LABEL_ONLY_NOT_PREPARED', 'Solo le voci che non sono ancora preparate');
+define('ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_US', 'ML_GOOGLESHOPPING_TARGET_COUNTRY_NAME_US');
+define('ML_GOOGLESHOPPING_BUTTON_PREPARE', 'Preparare');
+define('ML_GOOGLESHOPPING_LABEL_PREPARE', 'Tipo di preparazione');
+define('ML_GOOGLESHOPPING_BUTTON_UNPREPARE', 'Annulla la preparazione per la selezione completa');
+define('ML_GOOGLESHOPPING_BUTTON_RESET_DESCRIPTION', 'Annullamento della preparazione per la descrizione dell\'articolo');
+define('ML_GOOGLESHOPPING_COMMENT', 'Note sul tuo prodotto');
+define('ML_GOOGLESHOPPING_PREORDER', 'Preordine');
+define('ML_GOOGLESHOPPING_UPLOAD_EXPLANATION', 'Gli articoli caricati di solito appaiono su Google entro due ore. Gli articoli sono poi disponibili anche nel tuo account Google merchant.');
+define('ML_GOOGLESHOPPING_NEW_ITMES', 'Applicare nuovi prodotti');
+define('ML_GOOGLESHOPPING_BUTTON_TOKEN_NEW', 'Applicare / Cambiare il gettone');
+define('ML_ERROR_NOTE_CATEGORY_NOT_SELECTED', 'Please choose a category');
+define('ML_METRO_PRODUCT_DETAILS', 'ML_METRO_PRODUCT_DETAILS');
+define('ML_METRO_PRODUCT_TITLE', 'ML_METRO_PRODUCT_TITLE');
+define('ML_METRO_PRODUCT_IMAGES', 'ML_METRO_PRODUCT_IMAGES');
+define('ML_METRO_SHORTDESCRIPTION', 'ML_METRO_SHORTDESCRIPTION');
+define('ML_METRO_PRODUCT_GTIN', 'ML_METRO_PRODUCT_GTIN');
+define('ML_METRO_PRODUCT_MANUFACTURER', 'ML_METRO_PRODUCT_MANUFACTURER');
+define('ML_METRO_PRODUCT_MPN', 'ML_METRO_PRODUCT_MPN');
+define('ML_METRO_PRODUCT_BRAND', 'ML_METRO_PRODUCT_BRAND');
+define('ML_METRO_PRODUCT_MSRP', 'ML_METRO_PRODUCT_MSRP');
+define('ML_METRO_PRODUCT_KEYFEATURE', 'ML_METRO_PRODUCT_KEYFEATURE');
+define('ML_METRO_PREPARE_PRODUCT_TITLE_INFO', 'ML_METRO_PREPARE_PRODUCT_TITLE_INFO');
+define('ML_METRO_PREPARE_PRODUCT_SHORTDESCRIPTION_INFO', 'ML_METRO_PREPARE_PRODUCT_SHORTDESCRIPTION_INFO');
+define('ML_METRO_PREPARE_PRODUCT_DESCRIPTION_INFO', 'ML_METRO_PREPARE_PRODUCT_DESCRIPTION_INFO');
+define('ML_METRO_PREPARE_PRODUCT_IMAGES_INFO', 'ML_METRO_PREPARE_PRODUCT_IMAGES_INFO');
+define('ML_METRO_PREPARE_PRODUCT_GTIN_INFO', 'ML_METRO_PREPARE_PRODUCT_GTIN_INFO');
+define('ML_METRO_PREPARE_PRODUCT_MANUFACTURER_INFO', 'ML_METRO_PREPARE_PRODUCT_MANUFACTURER_INFO');
+define('ML_METRO_PREPARE_PRODUCT_MPN_INFO', 'ML_METRO_PREPARE_PRODUCT_MPN_INFO');
+define('ML_METRO_PREPARE_PRODUCT_BRAND_INFO', 'ML_METRO_PREPARE_PRODUCT_BRAND_INFO');
+define('ML_METRO_PREPARE_PRODUCT_MSRP_INFO', 'ML_METRO_PREPARE_PRODUCT_MSRP_INFO');
+define('ML_METRO_PREPARE_PRODUCT_KEY_FEATURE_INFO', 'ML_METRO_PREPARE_PRODUCT_KEY_FEATURE_INFO');
+define('ML_METRO_PRODUCT_GENERALSETTINGS', 'ML_METRO_PRODUCT_GENERALSETTINGS');
+define('ML_METRO_LABEL_SELECT_CATEGORY', 'ML_METRO_LABEL_SELECT_CATEGORY');
+define('ML_METRO_LABEL_PROCESSINGTIME', 'ML_METRO_LABEL_PROCESSINGTIME');
+define('ML_METRO_LABEL_BUSINESSMODEL', 'ML_METRO_LABEL_BUSINESSMODEL');
+define('ML_METRO_LABEL_FREIGHTFORWARDING', 'ML_METRO_LABEL_FREIGHTFORWARDING');
+define('ML_METRO_LABEL_SHIPPINGPROFILE', 'ML_METRO_LABEL_SHIPPINGPROFILE');
+define('ML_METRO_STOCK_FOR_METRO', 'ML_METRO_STOCK_FOR_METRO');
+define('ML_METRO_PRICE_FOR_METRO', 'ML_METRO_PRICE_FOR_METRO');
+define('ML_METRO_LABEL_TITLE', 'ML_METRO_LABEL_TITLE');
+define('ML_METRO_LISTING_ID', 'ML_METRO_LISTING_ID');
+define('ML_METRO_PRICE_SHOP_METRO', 'ML_METRO_PRICE_SHOP_METRO');
+define('ML_METRO_STOCK_SHOP_METRO', 'ML_METRO_STOCK_SHOP_METRO');
+define('ML_METRO_ERROR_GTIN', 'ML_METRO_ERROR_GTIN');
+define('ML_METRO_STATUS_PRODUCT_IS_PENDING_DELETE', 'ML_METRO_STATUS_PRODUCT_IS_PENDING_DELETE');
+define('ML_METRO_DELETED_OFFER_PURGE_INFO', 'ML_METRO_DELETED_OFFER_PURGE_INFO');

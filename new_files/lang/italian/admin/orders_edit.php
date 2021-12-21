@@ -1,7 +1,7 @@
 <?php
 // Testo generale
 define('TABLE_HEADING', 'salva data ordine');
-define('TABLE_HEADING_ORDER', 'ordine n°:&nbsp;');
+define('TABLE_HEADING_ORDER', 'ordine n&deg;:&nbsp;');
 define('TEXT_SAVE_ORDER', 'teminare salvataggio ordine e calcolare nuovamente l\'ordine.');
 define('TEXT_EDIT_ADDRESS', 'inserire e salvare i dati indirizzo ed i dati cliente.');
 define('TEXT_EDIT_PRODUCTS', 'Inserire e salvare articoli e opzioni articoli.');
@@ -32,7 +32,7 @@ define('TEXT_EDIT_GIFT', 'salva o inserisci buono e sconto');
 define('TEXT_EDIT_ADDRESS_SUCCESS', 'la modifica indirizzo &egrave; stata memorizzata.');
 define('TEXT_SMALL_NETTO', '(Netto)');
 define('TEXT_PRODUCT_ID', 'pID:');
-define('TEXT_PRODUCTS_MODEL', 'Art.n°:');
+define('TEXT_PRODUCTS_MODEL', 'Art.n&deg;:');
 define('TEXT_QUANTITY', 'Quantit&agrave;:');
 define('TEXT_PRODUCT', 'Articolo:');
 define('TEXT_TAX', 'IVA.:');

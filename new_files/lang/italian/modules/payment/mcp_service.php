@@ -6,6 +6,9 @@
  * @author     micropayment GmbH <shop-plugins@micropayment.de>
  */
 
+define('MODULE_PAYMENT_MCP_SERVICE_TEXT_TITLE','micropayment - Gateway');
+define('MODULE_PAYMENT_MCP_SERVICE_TEXT_DESCRIPTION','Bla Blub ding dong');
+define('MODULE_PAYMENT_MCP_SERVICE_TEXT_INFO','INFOTEXT von MCP_SERVICE');
 define('MODULE_PAYMENT_MCP_SERVICE_STATUS_TITLE','Stato');
 define('MODULE_PAYMENT_MCP_SERVICE_STATUS_DESC','Attivare il modulo micropayment&trade;');
 define('MODULE_PAYMENT_MCP_SERVICE_SORT_ORDER_TITLE','Posizionamento');
@@ -32,6 +35,33 @@ define('MODULE_PAYMENT_MCP_SERVICE_SECRET_FIELD_VALUE_TITLE','Valore del campo d
 define('MODULE_PAYMENT_MCP_SERVICE_SECRET_FIELD_VALUE_DESC','Si prega di inserire un codice di sicurezza privato che non deve essere trasmesso ai clienti. Il micropayment&trade; server elaborer&agrave; questo codice ad ogni notifica per una maggiore sicurezza.');
 define('MODULE_PAYMENT_MCP_SERVICE_SUCCESS_TRANSACTION','L\'ordine &egrave; stato pagato. Il Codice Autentico &egrave;: %s');
 define('MODULE_PAYMENT_MCP_SERVICE_IP_NOT_ALLOWED','L\'indirizzo IP non &egrave; valido.');
+
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_PENDING_PAYMENT_ID_TITLE',' Bestellstatus: in Bezahlung');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_PENDING_PAYMENT_ID_DESC','Kunde ist am bezahlen der Bestellung');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_PROCESSING_ID_TITLE',' Bestellstatus: bezahlt');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_PROCESSING_ID_DESC','Kunde hat erfolgreich bezahlt.');
+
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_CANCELLED_ID_TITLE',' Stato dell\'ordine: Annullato');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_CANCELLED_ID_DESC', 'Quando un ordine viene cancellato, viene impostato questo stato');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_REFUNDED_ID_TITLE',' Stato dell\'ordine: Rimborsato');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_REFUNDED_ID_DESC','Quando viene attivato un rimborso, questo stato viene impostato.');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_PAYMENT_REVIEW_ID_TITLE',' Stato dell\'ordine: Pagamento in sospeso');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_PAYMENT_REVIEW_ID_DESC','In caso di problemi, questo stato &egrave; impostato in modo da poterlo controllare..');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_CONFLICT_ID_TITLE',' Stato dell\'ordine: Conflitto');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_CONFLICT_ID_DESC','Se si verifica un flusso di lavoro di eventi devianti, questo stato &egrave; impostato.');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_PARTPAY_ID_TITLE',' Bestellstatus: Vorkasse - Teilzahlung');
+define('MODULE_PAYMENT_MCP_SERVICE_ORDER_STATUS_PARTPAY_ID_DESC', 'Se una ricevuta di pagamento &egrave; segnalata per il pagamento anticipato ma l\'ordine non &egrave; completamente pagato, questo stato &egrave; impostato.');
+define('MODULE_PAYMENT_MCP_SERVICE_REFUND_COMMENT','&Egrave; stato attivato un rimborso..');
+define('MODULE_PAYMENT_MCP_SERVICE_SUCCESS_TRANSACTION','L\'ordine &egrave; stato pagato. Il codice di autorizzazione &egrave;: %s');
+define('MODULE_PAYMENT_MCP_SERVICE_ERROR_TERMINATED','La richiesta non &egrave; valida.');
+define('MODULE_PAYMENT_MCP_SERVICE_ERROR_UNKNOWN_ORDER_ID','L\'ordine non esiste');
+define('MODULE_PAYMENT_MCP_SERVICE_ERROR_SECRET_FIELD_MISSMATCH','Il campo di sicurezza non corrisponde!');
+define('MODULE_PAYMENT_MCP_SERVICE_ERROR_AMOUNT_MISSMATCH','La somma non corrisponde al valore pagato! Attuale: %s Obiettivo: %s');
+define('MODULE_PAYMENT_MCP_SERVICE_UNKNOWN_FUNCTION','La funzione non &egrave; nota.');
+define('MODULE_PAYMENT_MCP_SERVICE_ERROR_INVALID_AUTH_CODE','Il codice di autorizzazione non &egrave; corretto');
+define('MODULE_PAYMENT_MCP_SERVICE_ERROR_INVALID_AMOUNT_VALUE','L\'importo non &egrave; corretto');
+define('MODULE_PAYMENT_MCP_SERVICE_EXPIRE_DAYS_TITLE','Cancellazione di ordini non pagati');
+define('MODULE_PAYMENT_MCP_SERVICE_EXPIRE_DAYS_DESC','Per quanto tempo un ordine pu&ograve; rimanere nello stato "In attesa di pagamento" prima di essere rimosso dal pulsante "Effettua ordine". Si prega di impostare il numero di giorni. IMPORTANTE: Questo non rimuover&agrave; nessun ordine prepagato.');
 define('MODULE_PAYMENT_MCP_SERVICE_ERROR_TERMINATED','La richiesta non &egrave; valida.');
 define('MODULE_PAYMENT_MCP_SERVICE_ERROR_UNKNOWN_ORDER_ID','Questo ordine non esiste');
 define('MODULE_PAYMENT_MCP_SERVICE_ERROR_SECRET_FIELD_MISSMATCH','Campo di sicurezza sbagliato!');

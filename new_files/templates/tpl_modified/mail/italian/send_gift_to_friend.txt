@@ -11,4 +11,7 @@ Il suo codice personale del buono è {$GIFT_CODE}.
 
 Può riscuotere il buono facendo clic su {$GIFT_LINK}
 
+Se hai problemi a riscattare con il link qui sopra,
+è possibile inserire l'importo durante il processo di ordinazione.
+
 [SIGNATUR]

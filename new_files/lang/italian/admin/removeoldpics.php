@@ -8,6 +8,8 @@ define('LINK_INFO_TEXT', '<p>Con questa funzione &egrave; possibile cancellare l
 <p>se non ci sono pi&ugrave; riferimenti ad essi nel database.<br/>Quando un\'immagine non &egrave; pi&ugrave; necessaria ad un articolo pu&ograve; essere rimossa in modo intelligente dal webserver.</p><br/>');
 define('LINK_ORIGINAL', 'Rimuovere le vecchie immagini originali');
 define('LINK_INFO', 'Rimuovere le vecchie immagini informative');
+define('LINK_MIDI', 'Rimuovere le vecchie immagini midi');
+define('LINK_MINI', 'Rimuovere le vecchie mini immagini');
 define('LINK_THUMBNAIL', 'Rimuovere le vecchie immagini in miniatura');
 define('LINK_POPUP', 'Rimuovere le vecchie immagini popup');
 define ('LINK_MESSAGE', 'Le immagini degli articoli superflui della directory "/images/product_images/%s_images" sono state cancellate.');

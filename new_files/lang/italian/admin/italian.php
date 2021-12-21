@@ -70,8 +70,8 @@ define('BOX_CONFIGURATION_22', 'Opzioni ricerca');
 define('BOX_CONFIGURATION_24', 'Google, Matomo &amp; Facebook');
 define('BOX_CONFIGURATION_25', 'Captcha');
 define('BOX_CONFIGURATION_31', 'Skrill');
-define('BOX_CONFIGURATION_40', 'Popup Window Options');
-define('BOX_CONFIGURATION_1000', 'My Admin');
+define('BOX_CONFIGURATION_40', 'Opzioni della finestra popup');
+define('BOX_CONFIGURATION_1000', 'Il mio Admin');
 define('BOX_MODULES', 'Modulo pagamento-/spedizione-/conto');
 define('BOX_PAYMENT', 'Opzioni pagamento');
 define('BOX_SHIPPING', 'Tipo spedizione');
@@ -188,7 +188,7 @@ define('JS_PRODUCTS_DESCRIPTION', '* Il nuovo articolo deve avere una descrizion
 define('JS_PRODUCTS_PRICE', '* Il nuovo articolo deve avere un prezzo\n');
 define('JS_PRODUCTS_WEIGHT', '* deve essere indicato il peso per il nuovo articolo\n');
 define('JS_PRODUCTS_QUANTITY', '* Deve assegnare al nuovo articolo una quantit&agrave; che sia disponibile\n');
-define('JS_PRODUCTS_MODEL', '* Deve assegnare al nuovo articolo un articolo n°\n');
+define('JS_PRODUCTS_MODEL', '* Deve assegnare al nuovo articolo un articolo n&deg;\n');
 define('JS_PRODUCTS_IMAGE', '* Deve assegnare al nuovo articolo un\'immagine\n');
 define('JS_SPECIALS_PRODUCTS_PRICE', '* Per questo articolo deve essere stabilito un nuovo prezzo\n');
 define('JS_GENDER', '* Il \'Titolo\' deve essere scelto.\n');
@@ -204,7 +204,7 @@ define('JS_STATE_SELECT', '-- selezioni sopra --');
 define('JS_ZONE', '* La \'Provincia\' deve essere selezionata dalla lista relativa a questo Paese.');
 define('JS_COUNTRY', '* Il \'Paese\' deve essere selezionato.\n');
 define('JS_TELEPHONE', '* Il \'numero di telefono\' deve essere composto da minimo ' . ENTRY_TELEPHONE_MIN_LENGTH . ' segni.\n');
-define('JS_PASSWORD', '* La \'Password\' così come la \'conferma Password\' devono essere uguali e composti da minimo ' . ENTRY_PASSWORD_MIN_LENGTH . ' segni.\n');
+define('JS_PASSWORD', '* La \'Password\' cos&igrave; come la \'conferma Password\' devono essere uguali e composti da minimo ' . ENTRY_PASSWORD_MIN_LENGTH . ' segni.\n');
 define('JS_ORDER_DOES_NOT_EXIST', 'Il numero incarico %s non esiste!');
 define('CATEGORY_PERSONAL', 'Dati personali');
 define('CATEGORY_ADDRESS', 'Indirizzo');
@@ -281,6 +281,7 @@ define('TEXT_DISPLAY_NUMBER_OF_CURRENCIES', 'Saranno mostrati <b>%d</b> fino <b>
 define('TEXT_DISPLAY_NUMBER_OF_LANGUAGES', 'saranno mostrate <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> Lingue)');
 define('TEXT_DISPLAY_NUMBER_OF_MANUFACTURERS', 'saranno mostrate <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> produttori)');
 define('TEXT_DISPLAY_NUMBER_OF_NEWSLETTERS', 'saranno mostrati <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> circolari)');
+define('TEXT_DISPLAY_NUMBER_OF_NEWSLETTERS_RECIPIENTS', 'Visualizzando <b>%d</b> a <b>%d</b> (di <b>%d</b> destinatari della newsletter)');
 define('TEXT_DISPLAY_NUMBER_OF_ORDERS', 'saranno mostrati <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> ordini)');
 define('TEXT_DISPLAY_NUMBER_OF_ORDERS_STATUS', 'saranno mostrati <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> stato ordini)');
 define('TEXT_DISPLAY_NUMBER_OF_XSELL_GROUP', 'saranno mostrati <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> gruppi Cross-Marketing)');
@@ -318,7 +319,7 @@ define('ERROR_FILE_NOT_REMOVEABLE', 'Errore: File non rimosso.');
 define('DELETE_ENTRY','Cancellare registrazione?');
 define('TEXT_PAYMENT_ERROR','<b>ATTENZIONE:</b><br />Attivi un modulo di pagamento!');
 define('TEXT_SHIPPING_ERROR','<b>ATTENZIONE:</b><br />Attivi un modulo spedizioni!');
-define('TEXT_PAYPAL_CONFIG','<b>ATTENZIONE:</b> Configurare qui le impostazioni di pagamento PayPal per la "Modalità live": <a href="%s"><strong>Partner -> PayPal</strong></a>.'); //DokuMan - 2012-05-31 - show warning if PayPal payment module activated, but not configured for live mode yet
+define('TEXT_PAYPAL_CONFIG','<b>ATTENZIONE:</b> Configurare qui le impostazioni di pagamento PayPal per la "Modalit&agrave; live": <a href="%s"><strong>Partner -> PayPal</strong></a>.'); //DokuMan - 2012-05-31 - show warning if PayPal payment module activated, but not configured for live mode yet
 define('TEXT_DUPLICATE_CONFIG_ERROR','<b>ATTENZIONE:</b> Chiave di configurazione duplicata: ');
 define('TEXT_NETTO','Netto: ');
 define('ENTRY_CID','numero cliente:');

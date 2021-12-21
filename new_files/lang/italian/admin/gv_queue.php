@@ -13,4 +13,6 @@ define('TEXT_REDEEM_COUPON_MESSAGE_AMOUNT', 'Il valore del buono da lei ordinato
 define('TEXT_REDEEM_COUPON_MESSAGE_BODY', '');
 define('TEXT_REDEEM_COUPON_MESSAGE_FOOTER', '');
 define('TEXT_REDEEM_COUPON_SUBJECT', 'acquista buono');
+define('TEXT_INFO_DELETE_INTRO', 'Cancellare questo buono regalo?');
+define('TEXT_INFO_REDEEM_INTRO', 'Riscuoti questo buono regalo?');
 ?>

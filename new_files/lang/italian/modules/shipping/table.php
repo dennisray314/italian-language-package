@@ -2,6 +2,7 @@
 define('MODULE_SHIPPING_TABLE_TEXT_TITLE', 'Tabella delle spese di spedizione');
 define('MODULE_SHIPPING_TABLE_TEXT_DESCRIPTION', 'Tabella spese di spedizione');
 define('MODULE_SHIPPING_TABLE_TEXT_WAY', 'miglior percorso');
+define('MODULE_SHIPPING_TABLE_TEXT_UNITS', 'kg');
 define('MODULE_SHIPPING_TABLE_TEXT_WEIGHT', 'peso');
 define('MODULE_SHIPPING_TABLE_TEXT_AMOUNT', 'quantit&agrave;');
 define('MODULE_SHIPPING_TABLE_INVALID_ZONE', 'Nessuna spedizione disponibile per il paese selezionato!');

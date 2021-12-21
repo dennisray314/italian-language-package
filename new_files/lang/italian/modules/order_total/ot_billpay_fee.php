@@ -13,6 +13,9 @@ $prefix = 'MODULE_ORDER_TOTAL_BILLPAY_';
   define($prefix.'FEE_PERCENT_DESC','Inserire le percentuali per ogni paese (ad es. DE:5;CH:7).');
   define($prefix.'FEE_VALUE_TITLE','Importo fisso');
   define($prefix.'FEE_VALUE_DESC','Inserire un importo fisso per ogni paese (ad es. DE:5;CH:7).');
+  define($prefix.'FEE_GRADUATE_TITLE','sconcertante');
+  define($prefix.'FEE_GRADUATE_DESC','Inserite la tariffa nella forma {Totale fattura}={Totale netto};{Totale fattura}={Totale netto};. Questa scala mobile viene applicata al totale della fattura se il tipo di tariffa "scala mobile" &egrave; attivato.');
+
   define($prefix.'FEE_TAX_CLASS_TITLE','Classe fiscale');
   define($prefix.'FEE_TAX_CLASS_DESC','Scegliere una classe fiscale per la tassa');
   // display
