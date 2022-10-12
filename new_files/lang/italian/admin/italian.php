@@ -1,12 +1,43 @@
 <?php
+/* --------------------------------------------------------------
+   $Id: italian.php 14517 2022-06-11 08:49:23Z GTB $
 
-@setlocale(LC_TIME, 'it_IT.ISO8859-1', 'it_IT', 'it-IT', 'it');
-define('DATE_FORMAT_SHORT', '%d.%m.%Y');  // this is used for strftime()
-define('DATE_FORMAT_LONG', '%A, %d. %B %Y'); // this is used for strftime()
-define('DATE_FORMAT', 'd.m.Y');  // this is used for strftime()
-define('PHP_DATE_TIME_FORMAT', 'd.m.Y H:i:s'); // this is used for date()
-define('DATE_TIME_FORMAT', DATE_FORMAT_SHORT . ' %H:%M:%S');
+   modified eCommerce Shopsoftware
+   http://www.modified-shop.org
 
+   Copyright (c) 2009 - 2013 [www.modified-shop.org]
+   --------------------------------------------------------------
+   based on:
+   (c) 2000-2001 The Exchange Project  (earlier name of osCommerce)
+   (c) 2002-2003 osCommerce(italian.php,v 1.99 2003/05/28); www.oscommerce.com
+   (c) 2003 nextcommerce (italian.php,v 1.24 2003/08/24); www.nextcommerce.org
+   (c) 2006 XT-Commerce (italian.php)
+
+   Released under the GNU General Public License
+   --------------------------------------------------------------
+   Third Party contributions:
+   Customers Status v3.x (c) 2002-2003 Copyright Elari elari@free.fr | www.unlockgsm.com/dload-osc/ | CVS : http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/elari/?sortby=date#dirlist
+
+   Released under the GNU General Public License 
+   --------------------------------------------------------------*/
+
+// look in your $PATH_LOCALE/locale directory for available locales..
+// on RedHat6.0 I used 'it_IT'
+// on FreeBSD 4.0 I use 'it_IT.ISO_8859-1'
+// this may not work under win32 environments..
+
+@setlocale(LC_TIME, 'it_IT.UTF-8', 'it_IT', 'it-IT', 'it', 'Italian');
+
+define('DATE_LOCALE', 'it_IT');
+define('DATE_FORMAT_SHORT', 'd.m.Y');
+define('DATE_FORMAT_LONG', 'l, d. F Y');
+define('DATE_FORMAT', DATE_FORMAT_SHORT);
+define('PHP_DATE_TIME_FORMAT',  DATE_FORMAT_SHORT . ' H:i:s');
+define('DATE_TIME_FORMAT', DATE_FORMAT_SHORT . ' H:i:s');
+
+// Return date in raw format
+// $date should be in format mm/dd/yyyy
+// raw date is in format YYYYMMDD, or DDMMYYYY
 function xtc_date_raw($date, $reverse = false) {
   if ($reverse) {
     return substr($date, 0, 2) . substr($date, 3, 2) . substr($date, 6, 4);
@@ -14,23 +45,32 @@ function xtc_date_raw($date, $reverse = false) {
     return substr($date, 6, 4) . substr($date, 3, 2) . substr($date, 0, 2);
   }
 }
+
 require_once(DIR_FS_INC.'auto_include.inc.php');
 foreach(auto_include(DIR_FS_LANGUAGES.'italian/extra/admin/','php') as $file) require ($file);
+
 // Global entries for the <html> tag
 define('HTML_PARAMS','dir="ltr" lang="it"');
+
 // page title
 define('TITLE', defined('PROJECT_VERSION') ? PROJECT_VERSION : 'undefined');
+
 // header text in includes/header.php
 define('HEADER_TITLE_TOP', 'Administration');
 define('HEADER_TITLE_SUPPORT_SITE', 'pagina di supporto');
 define('HEADER_TITLE_ONLINE_CATALOG', 'Catalogo Online');
 define('HEADER_TITLE_ADMINISTRATION', 'Administration');
+
 // text for gender
 define('MALE', 'Signore');
 define('FEMALE', 'Signora');
+define('DIVERSE', 'Diverse');
+
 // text for date of birth example
 define('DOB_FORMAT_STRING', 'gg.mm.aaaa');
+
 // configuration box text in includes/boxes/configuration.php
+
 define('BOX_HEADING_CONFIGURATION','Configurazione');
 define('BOX_HEADING_MODULES','Modulo');
 define('BOX_HEADING_PARTNER_MODULES','Moduli per i partner');
@@ -43,6 +83,8 @@ define('BOX_HEADING_LOCALIZATION', 'Lingue/valute');
 define('BOX_HEADING_TEMPLATES','Modelli');
 define('BOX_HEADING_LOCATION_AND_TAXES', 'Posizionamento/Tax');
 define('BOX_HEADING_CATALOG', 'Catalogo');
+define('BOX_MODULE_NEWSLETTER','Newsletter');
+
 define('BOX_CONTENT','Responsabile dei contenuti');
 define('TEXT_ALLOWED', 'Autorizzazione');
 define('TEXT_ACCESS', 'campo autorizzazione');
@@ -72,6 +114,7 @@ define('BOX_CONFIGURATION_25', 'Captcha');
 define('BOX_CONFIGURATION_31', 'Skrill');
 define('BOX_CONFIGURATION_40', 'Opzioni della finestra popup');
 define('BOX_CONFIGURATION_1000', 'Il mio Admin');
+
 define('BOX_MODULES', 'Modulo pagamento-/spedizione-/conto');
 define('BOX_PAYMENT', 'Opzioni pagamento');
 define('BOX_SHIPPING', 'Tipo spedizione');
@@ -112,8 +155,6 @@ define('BOX_CURRENCIES', 'Valute');
 define('BOX_LANGUAGES', 'Lingue');
 define('BOX_ORDERS_STATUS', 'Stato ordine');
 define('BOX_ATTRIBUTES_MANAGER','Amministrazione attributi');
-define('BOX_PRODUCTS_ATTRIBUTES','Gruppi opzioni');
-define('BOX_ORDERS_STATUS','Stato ordine');
 define('BOX_SHIPPING_STATUS','Stato spedizione');
 define('BOX_SALES_REPORT','statistica vendite');
 define('BOX_MODULE_EXPORT','Modulo XT');
@@ -122,7 +163,6 @@ define('BOX_HEADING_GV_ADMIN', 'Buono/Coupon');
 define('BOX_GV_ADMIN_QUEUE', 'Buono Queue');
 define('BOX_GV_ADMIN_MAIL', 'eMail buono');
 define('BOX_GV_ADMIN_SENT', 'buono inviato');
-define('BOX_HEADING_COUPON_ADMIN','Coupon sconto');
 define('BOX_COUPON_ADMIN','amministrazione coupon');
 define('BOX_TOOLS_BLACKLIST','-CC-Blacklist');
 define('BOX_IMPORT','Importazione/esportazione');
@@ -151,6 +191,14 @@ define('BOX_NEWSLETTER_RECIPIENTS', 'Destinatari della newsletter');
 define('BOX_DSGVO_EXPORT', 'RGPD Esportazione');
 define('BOX_SUPPORT', 'Supporto');
 define('BOX_CACHING', 'Caching');
+define('BOX_COOKIE_CONSENT', 'Cookie Consent');
+define('BOX_SEMKNOX', 'Site Search 360 Product Search');
+define('BOX_PAGES_CONTENT', 'Content sites');
+define('BOX_PRODUCTS_CONTENT', 'Product attachments');
+define('BOX_CONTENT_CONTENT', 'Content attachments');
+define('BOX_EMAIL_CONTENT', 'E-Mail attachments');
+define('BOX_DHL', 'DHL Shipping &amp; Label Creation');
+
 define('TXT_GROUPS','<b>Gruppi</b>:');
 define('TXT_SYSTEM','Sistema');
 define('TXT_CUSTOMERS','Clienti/ordini');
@@ -158,31 +206,13 @@ define('TXT_PRODUCTS','Prodotti/Categorie');
 define('TXT_STATISTICS','Statistiche');
 define('TXT_TOOLS','Strumenti');
 define('TEXT_ACCOUNTING','Accesso amministratore per:');
-/******* SHOPGATE **********/
-if (is_file(DIR_FS_CATALOG.'includes/external/shopgate/base/lang/italian/admin/italian.php')) {
-  include_once (DIR_FS_CATALOG.'includes/external/shopgate/base/lang/italian/admin/italian.php');
-}
-/******* SHOPGATE **********/
-define('TXT_GROUPS','<b>Gruppi</b>:');
-define('TXT_SYSTEM','Sistema');
-define('TXT_CUSTOMERS','Clienti/Ordini');
-define('TXT_PRODUCTS','Articolo/Categorie');
-define('TXT_STATISTICS','tools statistica');
-define('TXT_TOOLS','Appendice programmi');
-define('TEXT_ACCOUNTING','Registrazione accesso per:');
-//Dividers text for menu
-define('BOX_HEADING_MODULES', 'Moduli');
-define('BOX_HEADING_LOCALIZATION', 'Lingue/Valute');
-define('BOX_HEADING_TEMPLATES','Templates');
-define('BOX_HEADING_TOOLS', 'Programma di aiuto');
-define('BOX_HEADING_LOCATION_AND_TAXES', 'Paese / Imposta');
-define('BOX_HEADING_CUSTOMERS', 'Clienti');
-define('BOX_HEADING_CATALOG', 'Catalogo');
-define('BOX_MODULE_NEWSLETTER','Newsletter');
+
 // javascript messages
 define('JS_ERROR', 'Durante la richiesta si &egrave; verificato un errore!\n Corregga il seguente:\n\n');
+
 define('JS_OPTIONS_VALUE_PRICE', '* Assegnare un prezzo a questa merce\n');
 define('JS_OPTIONS_VALUE_PRICE_PREFIX', '* Deve inserire un segno per il prezzo(+/-)\n');
+
 define('JS_PRODUCTS_NAME', '* La nuova merce deve avere un prezzo\n');
 define('JS_PRODUCTS_DESCRIPTION', '* Il nuovo articolo deve avere una descrizione\n');
 define('JS_PRODUCTS_PRICE', '* Il nuovo articolo deve avere un prezzo\n');
@@ -190,7 +220,9 @@ define('JS_PRODUCTS_WEIGHT', '* deve essere indicato il peso per il nuovo artico
 define('JS_PRODUCTS_QUANTITY', '* Deve assegnare al nuovo articolo una quantit&agrave; che sia disponibile\n');
 define('JS_PRODUCTS_MODEL', '* Deve assegnare al nuovo articolo un articolo n&deg;\n');
 define('JS_PRODUCTS_IMAGE', '* Deve assegnare al nuovo articolo un\'immagine\n');
+
 define('JS_SPECIALS_PRODUCTS_PRICE', '* Per questo articolo deve essere stabilito un nuovo prezzo\n');
+
 define('JS_GENDER', '* Il \'Titolo\' deve essere scelto.\n');
 define('JS_FIRST_NAME', '* Il \'Nome\' deve essere composto da minimo' . ENTRY_FIRST_NAME_MIN_LENGTH . ' caratteri.\n');
 define('JS_LAST_NAME', '* Il \'Cognome\' deve essere composto da minimo ' . ENTRY_LAST_NAME_MIN_LENGTH . ' caratteri.\n');
@@ -205,12 +237,15 @@ define('JS_ZONE', '* La \'Provincia\' deve essere selezionata dalla lista relati
 define('JS_COUNTRY', '* Il \'Paese\' deve essere selezionato.\n');
 define('JS_TELEPHONE', '* Il \'numero di telefono\' deve essere composto da minimo ' . ENTRY_TELEPHONE_MIN_LENGTH . ' segni.\n');
 define('JS_PASSWORD', '* La \'Password\' cos&igrave; come la \'conferma Password\' devono essere uguali e composti da minimo ' . ENTRY_PASSWORD_MIN_LENGTH . ' segni.\n');
+
 define('JS_ORDER_DOES_NOT_EXIST', 'Il numero incarico %s non esiste!');
+
 define('CATEGORY_PERSONAL', 'Dati personali');
 define('CATEGORY_ADDRESS', 'Indirizzo');
 define('CATEGORY_CONTACT', 'Contatto');
 define('CATEGORY_COMPANY', 'Ditta');
 define('CATEGORY_OPTIONS', 'Altre opinioni');
+
 define('ENTRY_GENDER', 'Titolo:');
 define('ENTRY_GENDER_ERROR', '&nbsp;<span class="errorText">Indicazioni importanti</span>');
 define('ENTRY_FIRST_NAME', 'Nome:');
@@ -234,6 +269,7 @@ define('ENTRY_CITY_ERROR', '&nbsp;<span class="errorText">minimo ' . ENTRY_CITY_
 define('ENTRY_STATE', 'Regione:');
 define('ENTRY_STATE_ERROR', '&nbsp;<span class="errorText">informazione necessaria</font></small>');
 define('ENTRY_COUNTRY', 'Paese:');
+define('ENTRY_COUNTRY_ERROR', 'Please choose your country.');
 define('ENTRY_TELEPHONE_NUMBER', 'numero di telefono:');
 define('ENTRY_TELEPHONE_NUMBER_ERROR', '&nbsp;<span class="errorText">minimo ' . ENTRY_TELEPHONE_MIN_LENGTH . ' numeri</span>');
 define('ENTRY_FAX_NUMBER', 'numero fax:');
@@ -245,6 +281,7 @@ define('ENTRY_MAIL_ERROR','&nbsp;<span class="errorText">Effettui una scelta</sp
 define('ENTRY_PASSWORD','Password (\'esegui autom\')');
 define('ENTRY_PASSWORD_ERROR','&nbsp;<span class="errorText">La sua PAssword deve essere composta da minimo ' . ENTRY_PASSWORD_MIN_LENGTH . ' caratteri.</span>');
 define('ENTRY_MAIL_COMMENTS','Testo e-mail aggiuntivo:');
+
 define('ENTRY_MAIL','Inviare e-mail con PAssword al cliente?');
 define('YES','si');
 define('NO','no');
@@ -252,6 +289,9 @@ define('SAVE_ENTRY','Salvare modifiche?');
 define('TEXT_CHOOSE_INFO_TEMPLATE','Presentazione per dettagli articoli');
 define('TEXT_CHOOSE_OPTIONS_TEMPLATE','Presentazione per opzioni articoli');
 define('TEXT_SELECT','-- Selezioni --');
+define('PULL_DOWN_DEFAULT', 'Please Select');
+
+// BOF - Tomcraft - 2009-06-10 - added some missing alternative text on admin icons
 // Icons
 define('ICON_ARROW_RIGHT','contrassegnato');
 define('ICON_BIG_WARNING','Attenzione!');
@@ -272,6 +312,8 @@ define('ICON_SUCCESS', 'eseguito');
 define('ICON_TICK', 'autentico');
 define('ICON_UNLOCKED', 'sbloccato');
 define('ICON_WARNING', 'Avviso');
+// EOF - Tomcraft - 2009-06-10 - added some missing alternative text on admin icons
+
 // constants for use in tep_prev_next_display function
 define('TEXT_RESULT_PAGE', 'pagina %s di %d');
 define('TEXT_DISPLAY_NUMBER_OF_BANNERS', 'saranno mostrate <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> Banner)');
@@ -296,19 +338,25 @@ define('TEXT_DISPLAY_NUMBER_OF_TAX_ZONES', 'saranno mostrati <b>%d</b> fino <b>%
 define('TEXT_DISPLAY_NUMBER_OF_TAX_RATES', 'saranno mostrate <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> aliquote imposta)');
 define('TEXT_DISPLAY_NUMBER_OF_ZONES', 'saranno mostrate <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> Regione)');
 define('TEXT_DISPLAY_NUMBER_OF_WHOS_ONLINE', 'saranno mostrate <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> Clienti che sono online)');
+
 define('PREVNEXT_BUTTON_PREV', '&laquo;');
 define('PREVNEXT_BUTTON_NEXT', '&raquo;');
+
 define('TEXT_DEFAULT', 'Standard');
 define('TEXT_SET_DEFAULT', 'definiti come standard');
 define('TEXT_FIELD_REQUIRED', '&nbsp;<span class="fieldRequired">* Richiesto</span>');
+
 define('ERROR_NO_DEFAULT_CURRENCY_DEFINED', 'Errore: Non &egrave; stata definita nessuna valuta standard. La definisca sotto amministrazione -> Lingue/Valute -> Valuti una valuta Standard.');
+
 define('TEXT_CACHE_CATEGORIES', 'Box categorie');
 define('TEXT_CACHE_MANUFACTURERS', 'Box produttore');
 define('TEXT_CACHE_ALSO_PURCHASED', 'Moduli acquistati');
+
 define('TEXT_NONE', '--nessuno--');
 define('TEXT_AUTO_PROPORTIONAL', '--auto proporzionale--');
 define('TEXT_AUTO_MAX', '--auto max--');
 define('TEXT_TOP', 'Top');
+
 define('ERROR_DESTINATION_DOES_NOT_EXIST', 'Errore: La destinazione di memorizzazione non esiste.');
 define('ERROR_DESTINATION_NOT_WRITEABLE', 'Errore: la destinazione di memorizzazione non &egrave; scrivibile.');
 define('ERROR_FILE_NOT_SAVED', 'Errore: il file non &egrave; stato salvato.');
@@ -316,12 +364,14 @@ define('ERROR_FILETYPE_NOT_ALLOWED', 'Errore: il tipo  di dato non &egrave; auto
 define('SUCCESS_FILE_SAVED_SUCCESSFULLY', 'Esito: il caricamento file &egrave; avvenuto con successo.');
 define('WARNING_NO_FILE_UPLOADED', 'Avviso: non &egrave; stato caricato nessun file.');
 define('ERROR_FILE_NOT_REMOVEABLE', 'Errore: File non rimosso.');
+
 define('DELETE_ENTRY','Cancellare registrazione?');
 define('TEXT_PAYMENT_ERROR','<b>ATTENZIONE:</b><br />Attivi un modulo di pagamento!');
 define('TEXT_SHIPPING_ERROR','<b>ATTENZIONE:</b><br />Attivi un modulo spedizioni!');
 define('TEXT_PAYPAL_CONFIG','<b>ATTENZIONE:</b> Configurare qui le impostazioni di pagamento PayPal per la "Modalit&agrave; live": <a href="%s"><strong>Partner -> PayPal</strong></a>.'); //DokuMan - 2012-05-31 - show warning if PayPal payment module activated, but not configured for live mode yet
-define('TEXT_DUPLICATE_CONFIG_ERROR','<b>ATTENZIONE:</b> Chiave di configurazione duplicata: ');
 define('TEXT_NETTO','Netto: ');
+define('TEXT_DUPLICATE_CONFIG_ERROR','<b>ATTENZIONE:</b> Chiave di configurazione duplicata: ');
+
 define('ENTRY_CID','numero cliente:');
 define('IP','IP ordine:');
 define('CUSTOMERS_MEMO','Memos:');
@@ -329,6 +379,9 @@ define('DISPLAY_MEMOS','Mostrare/Scrivere');
 define('TITLE_MEMO','MEMO clienti');
 define('ENTRY_LANGUAGE','lingua:');
 define('CATEGORIE_NOT_FOUND','categoria non esistente');
+
+// BOF - Tomcraft - 2009-06-10 - added some missing alternative text on admin icons
+// Image Icons
 define('IMAGE_RELEASE', 'riscuoti buono');
 define('IMAGE_ICON_STATUS_GREEN_STOCK','in magazzino');
 define('IMAGE_ICON_STATUS_GREEN','attivo');
@@ -336,6 +389,8 @@ define('IMAGE_ICON_STATUS_GREEN_LIGHT','attivare');
 define('IMAGE_ICON_STATUS_RED','inattivo');
 define('IMAGE_ICON_STATUS_RED_LIGHT','disattivare');
 define('IMAGE_ICON_INFO','selezionare');
+// EOF - Tomcraft - 2009-06-10 - added some missing alternative text on admin icons
+
 define('_JANUARY', 'Gennaio');
 define('_FEBRUARY', 'Febbraio');
 define('_MARCH', 'Marzo');
@@ -348,19 +403,23 @@ define('_SEPTEMBER', 'Settembre');
 define('_OCTOBER', 'Ottobre');
 define('_NOVEMBER', 'Novembre');
 define('_DECEMBER', 'Dicembre');
-//descrizione per link registrazione nella Newsletter
+
+// Beschreibung f&uuml;r Abmeldelink im Newsletter
 define('TEXT_NEWSLETTER_REMOVE', 'Per registrarsi alle nostre Newsletter faccia clic qua:');
+
 define('TEXT_DISPLAY_NUMBER_OF_GIFT_VOUCHERS', 'saranno mostrati <b>%d</b> fino <b>%d</b> (di un totale <b>%d</b> buoni)');
 define('TEXT_DISPLAY_NUMBER_OF_COUPONS', 'saranno mostrati <b>%d</b> fino <b>%d</b> ((di un totale <b>%d</b> Coupons)');
 define('TEXT_VALID_PRODUCTS_LIST', 'Lista articoli');
 define('TEXT_VALID_PRODUCTS_ID', 'numero articolo');
 define('TEXT_VALID_PRODUCTS_NAME', 'Nome articolo');
 define('TEXT_VALID_PRODUCTS_MODEL', 'modello articolo');
+
 define('TEXT_VALID_CATEGORIES_LIST', 'Lista categoria');
 define('TEXT_VALID_CATEGORIES_ID', 'numero categoria');
 define('TEXT_VALID_CATEGORIES_NAME', 'nome categoria');
 
 define('TXT_ALL','Tutti');
+
 // UST ID
 define('HEADING_TITLE_VAT','Partita IVA');
 define('ENTRY_VAT_ID','Partita IVA:');
@@ -368,7 +427,6 @@ define('ENTRY_CUSTOMERS_VAT_ID', 'Partita IVA:');
 define('TEXT_VAT_FALSE','<font color="FF0000">Verificato/Errato!</font>');
 define('TEXT_VAT_TRUE','<font color="FF0000">Verificato/OK!</font>');
 define('TEXT_VAT_UNKNOWN_COUNTRY','<font color="FF0000">Non verificato/Paese sconosciuto!</font>');
-define('TEXT_VAT_UNKNOWN_ALGORITHM','<font color="FF0000">non verificato/nessun controllo &egrave; possibile!</font>');
 define('TEXT_VAT_INVALID_INPUT','<span class="messageStackError">Non controllato/Il CountryCode fornito non &egrave; valido o il numero di partita IVA &egrave; vuoto!</span>');
 define('TEXT_VAT_SERVICE_UNAVAILABLE','<span class="messageStackError">Non controllato / Il servizio SOAP non &egrave; disponibile, riprovare pi&ugrave; tardi!</span>');
 define('TEXT_VAT_MS_UNAVAILABLE','<span class="messageStackError">Non controllato / Il servizio dello Stato membro non &egrave; disponibile, riprovare pi&ugrave; tardi o con un altro Stato membro!</span>');
@@ -376,16 +434,18 @@ define('TEXT_VAT_TIMEOUT','<span class="messageStackError">Non Controllato/Il se
 define('TEXT_VAT_SERVER_BUSY','<span class="messageStackError">Non Controllato/Il servizio non &egrave; in grado di elaborare la vostra richiesta. Riprova pi&ugrave; tardi!</span>');
 define('TEXT_VAT_NO_PHP5_SOAP_SUPPORT','<span class="messageStackError">Non controllato/Il vostro sistema non ha il supporto di PHP5 SOAP!</span>');
 define('TEXT_VAT_CONNECTION_NOT_POSSIBLE','<span class="messageStackError">ERRORE: Collegamento al webservice non possibile (SOAP-ERROR)!</span>');
-define('ENTRY_VAT_ID_ERROR', '<font color="FF0000">* il numero Partita IVA dato &egrave; falso o al momento non pu&ograve; essere verificato!</font>');
-define('ERROR_GIF_MERGE', 'supporto GDlib Gif errato, nessuna filigrana possibile');
+
+define('ERROR_GIF_MERGE','supporto GDlib Gif errato, nessuna filigrana possibile');
 define('ERROR_GIF_UPLOAD','supporto GDlib Gif errato, non &egrave; possibile nessun Upload di immagine GIF');
-define('TEXT_REFERER','Referer: ');
+
 // BOF - Tomcraft - 2009-06-17 Google Sitemap
 define('BOX_GOOGLE_SITEMAP', 'Google Sitemap');
 // EOF - Tomcraft - 2009-06-17 Google Sitemap
+
 // BOF - Tomcraft - 2009-10-03 - Paypal Express Modul
 define('BOX_PAYPAL','PayPal');
 // EOF - Tomcraft - 2009-10-03 - Paypal Express Modul
+
 // BOF - Dokuman - 2009-10-02 - added moneybookers payment module version 2.4
 define('_PAYMENT_MONEYBOOKERS_EMAILID_TITLE','Indirizzo e-mail di Skrill');
 define('_PAYMENT_MONEYBOOKERS_EMAILID_DESC','L\'indirizzo e-mail con cui ti sei registrato a Skrill.<br />Se non hai un account Skrill puoi ottenerne uno gratuitamente all\'indirizzo  <a href="https://account.skrill.com/signup/page1" target="_blank">Skrill.com</a>.');
@@ -405,13 +465,16 @@ define('MB_ERROR_NO_MERCHANT','Non esiste un account Skrill associato a questo i
 define('MB_MERCHANT_OK','Conto Skrill OK, merchant ID %s ricevuti e salvati.');
 define('MB_INFO','<img src="../images/icons/moneybookers/MBbanner.jpg"><br /><br />&Egrave; possibile accettare carte di credito, note di debito, bonifico bancario online, Giropay e altri importanti pagamenti locali dopo una sola attivazione. Non avrete bisogno di contratti con ogni processore di pagamento se andate con Skrill. Tutto &egrave; fatto con <a href="https://account.skrill.com/signup/page1" target="_blank"><b>conto Skrill gratuito</b></a>. Ulteriori opzioni di pagamento sono gratuite, e non ci sono <b>nessun canone mensile o costi di attivazione</b>.<br /><br /><br /><b>Il vostro vantaggio:</b><br />- pi&ugrave; vendite accettando tutti i pagamenti principali<br />- costi e sforzi ridotti - un solo contratto<br />- facile elaborazione per il vostro cliente - pagamento diretto senza bisogno di creare un account aggiuntivo<br />- un click di attivazione e integrazione<br />- buono <a href="https://www. skrill.com/it/fees/" target="_blank"><b>condizioni</b></a><br />- notifica immediata del pagamento e prova dei dettagli del cliente<br />- nessun costo aggiuntivo, anche all\'estero<br />- 11 milioni di clienti in tutto il mondo');
 // EOF - Dokuman - 2009-10-02 - added moneybookers payment module version 2.4
+
 // BOF - Tomcraft - 2009-11-02 - set global customers-group-permissions
 define('BOX_CUSTOMERS_GROUP','Autorizzazioni CG');
 // EOF - Tomcraft - 2009-11-02 - set global customers-group-permissions
+
 // BOF - Tomcraft - 2009-11-02 - New admin top menu
 define('TEXT_ADMIN_START', 'Home');
 define('BOX_HEADING_CONFIGURATION2','Avv. Configurazione');
 // EOF - Tomcraft - 2009-11-02 - New admin top menu
+
 //BOF - web28 - 2010-04-10 - ADMIN SEARCH BAR
 define('ASB_QUICK_SEARCH_CUSTOMER','Ricerca clienti...');
 define('ASB_QUICK_SEARCH_ORDER','Ordini di ricerca...');
@@ -419,53 +482,70 @@ define('ASB_QUICK_SEARCH_ORDER_ID','Ricerca ordini ID...');
 define('ASB_QUICK_SEARCH_ARTICLE','Ricerca prodotti/categorie...');
 define('ASB_QUICK_SEARCH_EMAIL', 'Ricerca indirizzi e-mail...');
 define('ASB_QUICK_SEARCH_ARTICLE_ID','Ricerca prodotti/categorie ID...');
+define('ASB_QUICK_SEARCH_ORDER_OR_INVOICE','Search orders ID/invoice No....');
 //EOF - web28 - 2010-04-10 - ADMIN SEARCH BAR
+
 //BOF - web28 - 2010.05.30 - accounting - set all checkboxes , countries - set all flags
 define('BUTTON_SET','selezionare Tutti');
 define('BUTTON_UNSET','Deselezionare tutti');
 //EOF - web28 - 2010.05.30 - accounting - set all checkboxes 
+
 //BOF - DokuMan - 2010-08-12 - added possibility to reset admin statistics
 define('TEXT_ROWS','Row');
 define('TABLE_HEADING_RESET','Azzera le statistiche');
 //EOF - DokuMan - 2010-08-12 - added possibility to reset admin statistics
-//BOF - web28 - 2010-11-13 - add BUTTON_CLOSE_WINDOW
+
+//BOF - web28 - 2010-11-13 - added BUTTON_CLOSE_WINDOW
 define('BUTTON_CLOSE_WINDOW' , 'Chiudere la finestra');
-//EOF - web28 - 2010-11-13 - add BUTTON_CLOSE_WINDOW
+//EOF - web28 - 2010-11-13 - added BUTTON_CLOSE_WINDOW
+
 //BOF - hendrik - 2011-05-14 - independent invoice number and date
 define('ENTRY_INVOICE_NUMBER',  'Numero di fattura:'); 
 define('ENTRY_INVOICE_DATE',    'Data fattura:'); 
-//EOF - hendrik - 2011-05-14 - independent invoice number and date 
+//EOF - hendrik - 2011-05-14 - independent invoice number and date  
+
 //BOF - web28 - 2010-07-06 - added missing error text
 define('ENTRY_VAT_ERROR', '&nbsp;<span class="errorText">FUORI GAMMA IVA Reg.</span>');
 //EOF - web28 - 2010-07-06 - added missing error text
-define ('CONFIG_INT_VALUE_ERROR', '"% s" ERRORE: Inserire solo numeri &egrave; stato ignorato% s');
-define ('CONFIG_MAX_VALUE_WARNING', '"% s" ATTENZIONE:% s ingresso &egrave; stato ignorato [maximum:% s]');
-define ('CONFIG_MIN_VALUE_WARNING', '"% s" ATTENZIONE:% s ingresso &egrave; stato ignorato [Minimo:% s]');
-define ('WHOS_ONLINE_TIME_LAST_CLICK_INFO', 'Periodo di visualizzazione in secondi:% s Dopo questo tempo, le voci vengono cancellate.');
+
+define('CONFIG_INT_VALUE_ERROR', '"% s" ERRORE: Inserire solo numeri &egrave; stato ignorato% s');
+define('CONFIG_MAX_VALUE_WARNING', '"% s" ATTENZIONE:% s ingresso &egrave; stato ignorato [maximum:% s]');
+define('CONFIG_MIN_VALUE_WARNING', '"% s" ATTENZIONE:% s ingresso &egrave; stato ignorato [Minimo:% s]');
+
+define('WHOS_ONLINE_TIME_LAST_CLICK_INFO', 'Periodo di visualizzazione in secondi:% s Dopo questo tempo, le voci vengono cancellate.');
+
 define('TEXT_GLOBAL_PRODUCTS_MODEL', 'Prodotti Modello');
-define ('TEXT_INFO_MODULE_RESTORE', 'Vuoi ripristinare le impostazioni salvate? <br /><br /><b>Avvertenza</b>: Questo sovrascriver&agrave; le impostazioni correnti!');
-define ('TEXT_INFO_MODULE_REMOVE', 'Vuoi disinstallare il modulo? <br /><br /><b>Attenzione</b>: Anche tutte le impostazioni del modulo vengono cancellate!');
-define ('TEXT_INFO_MODULE_BACKUP', 'Volete eseguire il backup delle impostazioni del modulo?');
-define ('MODULE_BACKUP_CONFIRM', 'Le impostazioni del modulo sono state salvate con successo!');
-define ('MODULE_RESTORE_CONFIRM', 'Le impostazioni del modulo sono state ripristinate con successo!');
-define ('MODULE_UPDATE_CONFIRM', 'Le impostazioni del modulo sono state aggiornate con successo!');
+
+define('TEXT_INFO_MODULE_RESTORE', 'Vuoi ripristinare le impostazioni salvate? <br /><br /><b>Avvertenza</b>: Questo sovrascriver&agrave; le impostazioni correnti!');
+define('TEXT_INFO_MODULE_REMOVE', 'Vuoi disinstallare il modulo? <br /><br /><b>Attenzione</b>: Anche tutte le impostazioni del modulo vengono cancellate!');
+define('TEXT_INFO_MODULE_BACKUP', 'Volete eseguire il backup delle impostazioni del modulo?');
+define('MODULE_BACKUP_CONFIRM', 'Le impostazioni del modulo sono state salvate con successo!');
+define('MODULE_RESTORE_CONFIRM', 'Le impostazioni del modulo sono state ripristinate con successo!');
+define('MODULE_UPDATE_CONFIRM', 'Le impostazioni del modulo sono state aggiornate con successo!');
+
 /* magnalister v1.0.0 */
 define('BOX_HEADING_MAGNALISTER', 'magnalister');
 define('BOX_MAGNALISTER', 'magnalister Admin');
 /* END magnalister */
+
 define('CHARS_LEFT', 'caratteri a sinistra');
 define('CHARS_MAX', 'di max.');
+
 define('DISPLAY_PER_PAGE', 'Visualizzazione per pagina: ');
+
 define('SPECIALS_DATE_START_TT', 'Le offerte iniziano alle 00:00:00');
 define('SPECIALS_DATE_END_TT', 'Le offerte terminano a mezzanotte (23:59:59)');
+
 define('BOX_PARCEL_CARRIERS', 'Portapacchi');
 define('TEXT_DISPLAY_NUMBER_OF_CARRIERS', 'Visualizzazione da <b>%d</b> a <b>%d</b> (di <b>%d</b> vettori)');
+
 define('RSS_FEED_TITLE', 'Ultime informazioni dal blog di eCommerce Shopsoftware modificato');
 define('RSS_FEED_DESCRIPTION', 'Ultime informazioni dal forum di supporto eCommerce Shopsoftware modificato');
 define('RSS_FEED_LINK', 'http://www.modified-shop.org/blog');
 define('RSS_FEED_ALTERNATIVE', 'Purtroppo le ultime notizie non possono essere visualizzate nel feed RSS. Si prega di visitare il nostro Blog all\'indirizzo <a href="'.RSS_FEED_LINK.'">www.modified-shop.org/blog</a> per ottenere informazioni importanti per i gestori dei negozi sui seguenti argomenti: <ul><li>Aggiornamenti e correzioni importanti</li><li>Estensioni delle funzioni</li><li>giurisdizioni</li><li>Notizie</li><li>Gossip</li></ul>');
 define('RSS_FEED_NOT_REACHABLE', 'Il newsfeed non ha potuto essere aggiornato per molto tempo.<br>Non perdetevi le notizie importanti, le offerte e molto altro ancora. Venite a trovarci <a target="_blank" href="https://www.modified-shop.org/blog">www.modified-shop.org/blog</a><br>');
 define('TEXT_DISPLAY_NUMBER_OF_NEWSFEED', 'Visualizzati da <b>%d</b> a <b>%d</b> (di <b>%d</b> notizie)');
+
 define('CFG_TXT_YES', 'S&igrave;');
 define('CFG_TXT_NO', 'No');
 define('CFG_TXT_OR', 'oppure');
@@ -489,31 +569,55 @@ define('CFG_TXT_ORDERS', 'Ordini');
 define('CFG_TXT_CUSTOMERS', 'Clienti');
 define('CFG_TXT_SALES_REPORT', 'Statistiche');
 define('CFG_TXT_BLOG', 'Blog');
+define('CFG_TXT_P.PRODUCTS_PRICE', 'Price');
+define('CFG_TXT_PD.PRODUCTS_NAME', 'Product name');
+define('CFG_TXT_P.PRODUCTS_DATE_ADDED', 'Release date');
+define('CFG_TXT_P.PRODUCTS_MODEL', 'Products Model');
+define('CFG_TXT_P.PRODUCTS_ORDERED', 'Products ordered');
+define('CFG_TXT_P.PRODUCTS_SORT', 'Sort order');
+define('CFG_TXT_P.PRODUCTS_WEIGHT', 'Weight');
+define('CFG_TXT_P.PRODUCTS_QUANTITY', 'On Stock');
+define('CFG_TXT_S.SPECIALS_DATE_ADDED', 'Release date');
+
 define('CSRF_TOKEN_MANIPULATION', 'Manipolazione CSRFToken (a causa di aspetti di sicurezza non &egrave; pi&ugrave; consentito lavorare nell\'area amministrativa in diverse schede del browser.)');
 define('CSRF_TOKEN_NOT_DEFINED', 'CSRFToken non definito (a causa di aspetti di sicurezza non &egrave; pi&ugrave; consentito lavorare nell\'area amministrativa in diverse schede del browser.)');
+
 define('TEXT_ACCOUNTING_INFO','L\'amministratore principale [1] non pu&ograve; essere privato dei diritti di accesso.');
+
 define('JAVASCRIPT_DISABLED_INFO', 'JavaScript sembra essere disabilitato nel tuo browser. Attivare JavaScript per poter utilizzare tutte le funzioni di questo sito e tutti i contenuti del sito');
+
 define('BOX_MODULE_TYPE', 'Moduli di estensione di classe');
+
 define('MULTIPLE_INSTALLATION', '<span style="color:red">[Installazione multipla: %s]</span>');
+
 define('FILEUPLOAD_INPUT_TXT', 'Nessun file');
 define('FILEUPLOAD_BTN_TXT', 'Ricerca');
+
 define('CHECK_LABEL_PRICE', 'Controlla il prezzo');
+
 define('TEXT_PAYPAL_TAB_CONFIG', 'Configurazione PayPal');
 define('TEXT_PAYPAL_TAB_PROFILE', 'Profilo PayPal');
 define('TEXT_PAYPAL_TAB_WEBHOOK', 'PayPal Webhook');
 define('TEXT_PAYPAL_TAB_MODULE', 'Prodotti PayPal');
 define('TEXT_PAYPAL_TAB_INFO', 'Informazioni PayPal');
+
 define('TEXT_DEFAULT_SORT_ORDER_TITLE', 'Criterio di ordinamento');
 define('TEXT_DEFAULT_SORT_ORDER_DESC', 'Ordine di elaborazione. Il numero pi&ugrave; piccolo viene eseguito per primo.');
 define('TEXT_DEFAULT_STATUS_TITLE', 'Attivare il modulo?');
 define('TEXT_DEFAULT_STATUS_DESC', 'Stato dei moduli');
+
 define('TEXT_HOUR', 'ora');
 define('TEXT_HOURS', 'orari');
+
 define('DELETE_LOGS_SUCCESSFUL', 'I file di registro sono stati cancellati con successo.');
+
 define('BOX_BLACKLIST_LOGS', 'Registri della lista nera');
+
 define('CONTINUE_WITHOUT_SAVE', 'I cambiamenti non salvati saranno respinti.');
+
 define('TEXT_SORT_ASC','ascendente');
 define('TEXT_SORT_DESC','discendente');
+
 define('MSRP','MSRP');
 define('YOUR_PRICE','il tuo prezzo ');
 define('UNIT_PRICE','prezzo unitario ');
@@ -521,4 +625,6 @@ define('ONLY',' Ora solo ');
 define('FROM','da ');
 define('YOU_SAVE','si salva ');
 define('INSTEAD','Il nostro prezzo precedente ');
+define('TXT_PER',' per ');
+define('TEXT_NO_PAYMENT', 'No payment method');
 ?>

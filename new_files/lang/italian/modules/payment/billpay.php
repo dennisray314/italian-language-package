@@ -101,7 +101,7 @@ define('MODULE_PAYMENT_BILLPAY_TEXT_INVOICE_INFO2', ' al seguente conto: ');
 define('MODULE_PAYMENT_BILLPAY_TEXT_INVOICE_INFO3', 'Data di scadenza che si riceve con la fattura');
 define('MODULE_PAYMENT_BILLPAY_TEXT_INVOICE_INFO_MAIL', '<br/>Si prega di trasferire l\'importo totale sul seguente conto entro la data di scadenza, che riceverete con la fattura, indicando il numero della transazione BillPay nella causale del pagamento (%s):');
 define('MODULE_PAYMENT_BILLPAY_TEXT_PHONE', 'Numero di telefono');
-define('MODULE_PAYMENT_BILLPAY_TEXT_INVOICE_INFO_MAIL', '<br/>Bitte &uuml;berweisen Sie den Gesamtbetrag unter Angabe der BillPay-Transaktionsnummer im Verwendungszweck (%s) bis zum F&auml;lligkeitsdatum, das Sie mit der Rechnung erhalten, auf das folgende Konto:');
+define('MODULE_PAYMENT_BILLPAY_TEXT_INVOICE_INFO_MAIL', '<br/>Si prega di trasferire l\'importo totale sul seguente conto entro la data di scadenza, che riceverete con la fattura, indicando il numero della transazione BillPay nella causale del pagamento (%s):');
 define('MODULE_PAYMENT_BILLPAY_TEXT_BANKDATA', 'Si prega di fornire le vostre coordinate bancarie.');
 define('MODULE_PAYMENT_BILLPAY_DUEDATE_TITLE', 'Scadenza');
 define('MODULE_PAYMENT_BILLPAY_TEXT_PURPOSE', 'Utilizzo');
